@@ -9,15 +9,18 @@ import static org.testng.Assert.assertEquals;
 
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.AfterSuite;
-import storefront.pageobjects.AvactisStoreFrontPage;
+import storefront.pageobjects.StoreFrontPage;
 import storefront.pageobjects.Product;
 import storefront.utilityclasses.Base;
+import storefront.pageobjects.TestExecutionListener;
 
+@Listeners({TestExecutionListener.class})
 public class StoreTests {
-	AvactisStoreFrontPage mainPage;
+	StoreFrontPage mainPage;
 
 	@Test(dataProviderClass = storefront.dataproviders.ProductsShoppingList.class, dataProvider = "ProductList")
 	public void addProductsToCart(String id, String name, String category,
@@ -39,7 +42,7 @@ public class StoreTests {
 
 	@BeforeClass
 	public void beforeClass() {
-		mainPage = new AvactisStoreFrontPage(Base.Browser.OPERA);
+		mainPage = new StoreFrontPage(Base.Browser.CHROME);
 	}
 
 	@AfterClass

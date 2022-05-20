@@ -23,7 +23,7 @@
 			<version>7.5</version>
 			<scope>test</scope>
 		</dependency>
-		
+
 
 		<!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
 		<dependency>
@@ -59,12 +59,14 @@
 			<artifactId>allure-testng</artifactId>
 			<version>2.18.0</version>
 		</dependency>
+
 		<!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-api -->
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-api</artifactId>
 			<version>1.7.36</version>
 		</dependency>
+
 		<!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-simple -->
 		<dependency>
 			<groupId>org.slf4j</groupId>
@@ -72,10 +74,9 @@
 			<version>1.7.36</version>
 			<scope>test</scope>
 		</dependency>
-
-
 	</dependencies>
 
+	
 	<build>
 		<pluginManagement>
 			<plugins>

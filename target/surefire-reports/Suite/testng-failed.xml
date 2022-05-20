@@ -6,13 +6,13 @@
       <class name="storefront.testclasses.StoreTests">
         <methods>
           <include name="afterClass"/>
-          <include name="afterMethod"/>
           <include name="beforeTest"/>
+          <include name="afterMethod"/>
           <include name="beforeMethod"/>
-          <include name="addProductsToCart"/>
+          <include name="addProductsToCart" invocation-numbers="1"/>
           <include name="beforeSuite"/>
-          <include name="afterSuite"/>
           <include name="afterTest"/>
+          <include name="afterSuite"/>
           <include name="beforeClass"/>
         </methods>
       </class> <!-- storefront.testclasses.StoreTests -->

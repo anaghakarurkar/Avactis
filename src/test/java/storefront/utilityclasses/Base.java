@@ -12,19 +12,20 @@ import org.openqa.selenium.opera.OperaDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public final class Base {
-	private WebDriver driver;
-	private String driverPath;
-	private WebDriverWait wait;
-	private String avactisStorePath;
-	private String avactisAdminPath;
-	private String adminUsername;
-	private String adminPassword;
-
-	public static enum Browser {
-		CHROME, MICROSOFTEDGE, OPERA
+	private static WebDriver driver;
+	private static String driverPath;
+	private static WebDriverWait wait;
+	private static String avactisStorePath;
+	private static String avactisAdminPath;
+	private static String adminUsername;
+	private static String adminPassword;
+    
+    
+    public static enum Browser {
+		CHROME, MICROSOFTEDGE
 	};
 
-	private Browser browserName;
+	private static Browser browserName;
 
 	public Base() {
 		this(Browser.CHROME);
@@ -34,6 +35,8 @@ public final class Base {
 		browserName = brName;
 		setProperties();
 	}
+	
+	
 
 	private void setProperties() {
 		// get all properties from config.properties and initialise class data members
@@ -49,14 +52,14 @@ public final class Base {
 			// Load properties file in InputStream
 			prop.load(fileInput);
 
-			this.driverPath = prop.getProperty(browserName.toString().toLowerCase());
-			this.avactisStorePath = prop.getProperty("storefrontlink");
-			this.avactisAdminPath = prop.getProperty("adminlink");
-			this.adminUsername = prop.getProperty("adminemail");
-			this.adminPassword = prop.getProperty("adminpassword");
+			driverPath = prop.getProperty(browserName.toString().toLowerCase());
+			avactisStorePath = prop.getProperty("storefrontlink");
+			avactisAdminPath = prop.getProperty("adminlink");
+			adminUsername = prop.getProperty("adminemail");
+			adminPassword = prop.getProperty("adminpassword");
 			
 			launchBrowser();
-			this.wait = new WebDriverWait(driver,
+			wait = new WebDriverWait(driver,
 			Duration.ofSeconds(Long.parseLong(prop.getProperty("waitinseconds"))));
 
 			fileInput.close();
@@ -76,10 +79,6 @@ public final class Base {
 			System.setProperty("webdriver.edge.driver", driverPath);
 			driver = new EdgeDriver();
 			break;
-		case OPERA:
-			System.setProperty("webdriver.opera.driver", driverPath);
-			driver = new OperaDriver();
-			break;
 		default:
 			break;
 		}
@@ -87,40 +86,40 @@ public final class Base {
 	}
 
 		
-	public void setExplicitWait(Duration duration) {
+	public static void setExplicitWait(Duration duration) {
 		wait = new WebDriverWait(driver, duration);
 	}
 
-	public WebDriverWait explicitWait() {
+	public static  WebDriverWait explicitWait() {
 		return wait;
 	}
 
-	public WebDriver getDriver() {
+	public static WebDriver getDriver() {
 		return driver;
 	}
 
-	public String getAvactisStoreFrontURL() {
+	public static String getAvactisStoreFrontURL() {
 		return avactisStorePath;
 	}
 
-	public String getAvactisAdminURL() {
+	public static String getAvactisAdminURL() {
 		return avactisAdminPath;
 	}
 
-	public String getAdminUserEmail() {
+	public static String getAdminUserEmail() {
 		return adminUsername;
 	}
 
-	public String getAdminPassword() {
+	public static String getAdminPassword() {
 		return adminPassword;
 	}
 
 	
-	public void closeBrowser() {
+	public static void closeBrowser() {
 		driver.close();
 	}
 
-	public void quitAllBrowserWindows() {
+	public static void quitAllBrowserWindows() {
 		driver.quit();
 	}
 	

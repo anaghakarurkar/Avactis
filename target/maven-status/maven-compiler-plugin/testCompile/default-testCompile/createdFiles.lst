@@ -1,5 +1,4 @@
 storefront\dataproviders\ProductsShoppingList.class
-storefront\utilityclasses\BaseSingleton.class
 storefront\utilityclasses\Base.class
 storefront\pageobjects\Product.class
 storefront\utilityclasses\Base$Browser.class

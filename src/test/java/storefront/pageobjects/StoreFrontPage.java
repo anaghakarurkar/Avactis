@@ -3,16 +3,14 @@ package storefront.pageobjects;
 import static org.testng.Assert.assertEquals;
 
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.LoadableComponent;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
 import storefront.utilityclasses.Base;
 
-public class AvactisStoreFrontPage extends LoadableComponent<AvactisStoreFrontPage> {
+
+public class StoreFrontPage extends LoadableComponent<StoreFrontPage> {
 	public Base baseObj;
 	private WebDriver driver;
 	private String storeURL;
@@ -22,11 +20,11 @@ public class AvactisStoreFrontPage extends LoadableComponent<AvactisStoreFrontPa
 	// All common WebElements are defined in this file
 	private FixedTopMenu topMenu = new FixedTopMenu();
 
-	public AvactisStoreFrontPage(Base.Browser brName) {
-		baseObj = new Base(brName);
-		this.driver = baseObj.getDriver();
-		this.storeURL = baseObj.getAvactisStoreFrontURL();
-		this.wait = baseObj.explicitWait();
+	public StoreFrontPage(Base.Browser brName) {
+		baseObj = new Base(Base.Browser.CHROME);
+		this.driver = Base.getDriver();
+		this.storeURL = Base.getAvactisStoreFrontURL();
+		this.wait = Base.explicitWait();
 		get();
 		PageFactory.initElements(driver, topMenu);
 	}

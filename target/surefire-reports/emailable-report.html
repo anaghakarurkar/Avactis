@@ -9,12 +9,19 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Suite</th></tr>
-<tr><td><a href="#t0">Test</a></td><td class="num">3</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">45,712</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Test</a></td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">34,066</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="3">storefront.testclasses.StoreTests</td><td><a href="#m0">addProductsToCart</a></td><td rowspan="3">1653061078873</td><td rowspan="3">11129</td></tr><tr class="passedeven"><td><a href="#m1">addProductsToCart</a></td></tr><tr class="passedeven"><td><a href="#m2">addProductsToCart</a></td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">storefront.testclasses.StoreTests</td><td><a href="#m0">addProductsToCart</a></td><td rowspan="1">1653071580661</td><td rowspan="1">3908</td></tr><tr><th colspan="4">Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="2">storefront.testclasses.StoreTests</td><td><a href="#m1">addProductsToCart</a></td><td rowspan="2">1653071585449</td><td rowspan="2">10588</td></tr><tr class="passedeven"><td><a href="#m2">addProductsToCart</a></td></tr></tbody>
 </table>
-<h2>Test</h2><h3 id="m0">storefront.testclasses.StoreTests#addProductsToCart</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th><th>Parameter #5</th></tr><tr class="param stripe"><td>36</td><td>Avactis T-Shirt</td><td>Apparel</td><td>None</td><td>YES</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Test</h2><h3 id="m0">storefront.testclasses.StoreTests#addProductsToCart</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th><th>Parameter #5</th></tr><tr class="param stripe"><td>90</td><td>Up</td><td>DVD</td><td>Kids DVDs</td><td>YES</td></tr><tr><th colspan="5">Exception</th></tr><tr><td colspan="5"><div class="stacktrace">java.lang.AssertionError: expected [Kids DVDs - Avactis Demo Store s] but found [Kids DVDs - Avactis Demo Store]
+	at storefront.pageobjects.ProductsPage.isLoaded(ProductsPage.java:45)
+	at org.openqa.selenium.support.ui.LoadableComponent.get(LoadableComponent.java:52)
+	at storefront.pageobjects.ProductsPage.&lt;init&gt;(ProductsPage.java:35)
+	at storefront.pageobjects.AvactisStoreFrontPage.addItemToTheCart(AvactisStoreFrontPage.java:107)
+	at storefront.testclasses.StoreTests.addProductsToCart(StoreTests.java:30)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 37 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 <h3 id="m1">storefront.testclasses.StoreTests#addProductsToCart</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th><th>Parameter #5</th></tr><tr class="param stripe"><td>126</td><td>Sea Eagle Sport Kayak</td><td>Sports</td><td>None</td><td>YES</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">storefront.testclasses.StoreTests#addProductsToCart</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th><th>Parameter #5</th></tr><tr class="param stripe"><td>90</td><td>Up</td><td>DVD</td><td>Kids DVDs</td><td>YES</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">storefront.testclasses.StoreTests#addProductsToCart</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th><th>Parameter #5</th></tr><tr class="param stripe"><td>36</td><td>Avactis T-Shirt</td><td>Apparel</td><td>None</td><td>YES</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>
