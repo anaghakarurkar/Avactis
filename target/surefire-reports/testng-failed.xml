@@ -9,10 +9,10 @@
           <include name="afterMethod"/>
           <include name="beforeTest"/>
           <include name="beforeMethod"/>
-          <include name="addProductsToCart" invocation-numbers="0"/>
+          <include name="addProductsToCart"/>
           <include name="beforeSuite"/>
-          <include name="afterTest"/>
           <include name="afterSuite"/>
+          <include name="afterTest"/>
           <include name="beforeClass"/>
         </methods>
       </class> <!-- storefront.testclasses.StoreTests -->

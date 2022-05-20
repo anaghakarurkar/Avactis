@@ -39,7 +39,7 @@ public class StoreTests {
 
 	@BeforeClass
 	public void beforeClass() {
-		mainPage = new AvactisStoreFrontPage(Base.Browser.CHROME);
+		mainPage = new AvactisStoreFrontPage(Base.Browser.OPERA);
 	}
 
 	@AfterClass
