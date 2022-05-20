@@ -1,0 +1,8 @@
+storefront\dataproviders\ProductsShoppingList.class
+storefront\utilityclasses\BaseSingleton.class
+storefront\utilityclasses\Base.class
+storefront\utilityclasses\Base$Browser.class
+storefront\pageobjects\FixedTopMenu.class
+storefront\pageobjects\AvactisStoreFrontPage.class
+storefront\utilityclasses\Base$1.class
+storefront\testclasses\StoreTests.class
