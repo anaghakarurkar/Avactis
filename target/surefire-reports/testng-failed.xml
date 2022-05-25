@@ -3,19 +3,20 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT" verbose="0">
   <test thread-count="5" name="Test(failed)" verbose="0">
     <classes>
-      <class name="storefront.testclasses.StoreTests">
+      <class name="tests.StoreTests">
         <methods>
-          <include name="afterClass"/>
           <include name="beforeTest"/>
-          <include name="afterMethod"/>
-          <include name="beforeMethod"/>
-          <include name="addProductsToCart" invocation-numbers="1"/>
-          <include name="beforeSuite"/>
+          <include name="verifyLoginUser" invocation-numbers="1"/>
           <include name="afterTest"/>
+          <include name="afterClass"/>
+          <include name="beforeSuite"/>
           <include name="afterSuite"/>
+          <include name="afterMethod"/>
+          <include name="verifyRegisterUser" invocation-numbers="1"/>
+          <include name="beforeMethod"/>
           <include name="beforeClass"/>
         </methods>
-      </class> <!-- storefront.testclasses.StoreTests -->
+      </class> <!-- tests.StoreTests -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

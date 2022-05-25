@@ -1,108 +1,74 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="2" failed="1" skipped="0">
+<testng-results ignored="0" total="2" passed="0" failed="1" skipped="1">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-05-20T20:10:40 BST" name="Default suite" finished-at="2022-05-20T20:11:15 BST" duration-ms="35002">
+  <suite started-at="2022-05-21T21:01:06 BST" name="Suite" finished-at="2022-05-21T21:01:14 BST" duration-ms="7690">
     <groups>
     </groups>
-    <test started-at="2022-05-20T20:10:40 BST" name="Default test" finished-at="2022-05-20T20:11:15 BST" duration-ms="35002">
-      <class name="storefront.testclasses.StoreTests">
-        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:storefront.testclasses.StoreTests@6ab4ba9f]" started-at="2022-05-20T20:10:40 BST" name="beforeSuite" finished-at="2022-05-20T20:10:40 BST" duration-ms="25" status="PASS">
+    <test started-at="2022-05-21T21:01:06 BST" name="Test" finished-at="2022-05-21T21:01:14 BST" duration-ms="7690">
+      <class name="tests.StoreTests">
+        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:tests.StoreTests@72ee5d84]" started-at="2022-05-21T21:01:06 BST" name="beforeSuite" finished-at="2022-05-21T21:01:06 BST" duration-ms="21" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeSuite -->
-        <test-method is-config="true" signature="beforeTest()[pri:0, instance:storefront.testclasses.StoreTests@6ab4ba9f]" started-at="2022-05-20T20:10:40 BST" name="beforeTest" finished-at="2022-05-20T20:10:40 BST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:tests.StoreTests@72ee5d84]" started-at="2022-05-21T21:01:06 BST" name="beforeTest" finished-at="2022-05-21T21:01:06 BST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method is-config="true" signature="beforeClass()[pri:0, instance:storefront.testclasses.StoreTests@6ab4ba9f]" started-at="2022-05-20T20:10:40 BST" name="beforeClass" finished-at="2022-05-20T20:10:46 BST" duration-ms="5692" status="PASS">
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:tests.StoreTests@72ee5d84]" started-at="2022-05-21T21:01:06 BST" name="beforeClass" finished-at="2022-05-21T21:01:10 BST" duration-ms="3757" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:storefront.testclasses.StoreTests@6ab4ba9f]" started-at="2022-05-20T20:10:48 BST" name="beforeMethod" finished-at="2022-05-20T20:10:48 BST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:tests.StoreTests@72ee5d84]" started-at="2022-05-21T21:01:10 BST" name="beforeMethod" finished-at="2022-05-21T21:01:10 BST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="addProductsToCart(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:storefront.testclasses.StoreTests@6ab4ba9f]" started-at="2022-05-20T20:10:48 BST" name="addProductsToCart" data-provider="ProductList" finished-at="2022-05-20T20:10:59 BST" duration-ms="10758" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[36]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Avactis T-Shirt]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[Apparel]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[None]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[YES]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- addProductsToCart -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:storefront.testclasses.StoreTests@6ab4ba9f]" started-at="2022-05-20T20:10:59 BST" name="afterMethod" finished-at="2022-05-20T20:10:59 BST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method signature="addProductsToCart(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:storefront.testclasses.StoreTests@6ab4ba9f]" started-at="2022-05-20T20:10:59 BST" name="addProductsToCart" data-provider="ProductList" finished-at="2022-05-20T20:11:03 BST" duration-ms="3905" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[90]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Up]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[DVD]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[Kids DVDs]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[YES]]>
-              </value>
-            </param>
-          </params>
-          <exception class="java.lang.AssertionError">
+        <test-method signature="registerUser()[pri:0, instance:tests.StoreTests@72ee5d84]" started-at="2022-05-21T21:01:10 BST" name="registerUser" finished-at="2022-05-21T21:01:13 BST" duration-ms="3560" status="FAIL">
+          <exception class="org.openqa.selenium.InvalidSelectorException">
             <message>
-              <![CDATA[expected [Kids DVDs - Avactis Demo Store s] but found [Kids DVDs - Avactis Demo Store]]]>
+              <![CDATA[invalid selector: An invalid or illegal selector was specified
+  (Session info: chrome=101.0.4951.67)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#invalid_selector_exception
+Build info: version: '4.1.4', revision: '535d840ee2'
+System info: host: 'ANAGHA_GRAM', ip: '192.168.0.97', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [6dcb7e120497a6cbb908322d643030f5, findElement {using=name, value=//input[@type='submit'][@value='Register']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 101.0.4951.67, chrome: {chromedriverVersion: 101.0.4951.41 (93c720db8323..., userDataDir: C:\Users\angha\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:58423}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:58423/devtoo..., se:cdpVersion: 101.0.4951.67, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 6dcb7e120497a6cbb908322d643030f5]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [Kids DVDs - Avactis Demo Store s] but found [Kids DVDs - Avactis Demo Store]
-at org.testng.Assert.fail(Assert.java:110)
-at org.testng.Assert.failNotEquals(Assert.java:1413)
-at org.testng.Assert.assertEqualsImpl(Assert.java:149)
-at org.testng.Assert.assertEquals(Assert.java:131)
-at org.testng.Assert.assertEquals(Assert.java:655)
-at org.testng.Assert.assertEquals(Assert.java:665)
-at storefront.pageobjects.ProductsPage.isLoaded(ProductsPage.java:45)
-at org.openqa.selenium.support.ui.LoadableComponent.get(LoadableComponent.java:52)
-at storefront.pageobjects.ProductsPage.<init>(ProductsPage.java:35)
-at storefront.pageobjects.AvactisStoreFrontPage.addItemToTheCart(AvactisStoreFrontPage.java:107)
-at storefront.testclasses.StoreTests.addProductsToCart(StoreTests.java:30)
+              <![CDATA[org.openqa.selenium.InvalidSelectorException: invalid selector: An invalid or illegal selector was specified
+  (Session info: chrome=101.0.4951.67)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#invalid_selector_exception
+Build info: version: '4.1.4', revision: '535d840ee2'
+System info: host: 'ANAGHA_GRAM', ip: '192.168.0.97', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [6dcb7e120497a6cbb908322d643030f5, findElement {using=name, value=//input[@type='submit'][@value='Register']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 101.0.4951.67, chrome: {chromedriverVersion: 101.0.4951.41 (93c720db8323..., userDataDir: C:\Users\angha\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:58423}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:58423/devtoo..., se:cdpVersion: 101.0.4951.67, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 6dcb7e120497a6cbb908322d643030f5
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:567)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:385)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:377)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+at jdk.proxy2/jdk.proxy2.$Proxy23.submit(Unknown Source)
+at pageobjects.RegisterUserPage.registerCustomer(RegisterUserPage.java:96)
+at pageobjects.LoginPage.registerUser(LoginPage.java:68)
+at pageobjects.StoreFrontPage.login(StoreFrontPage.java:51)
+at tests.StoreTests.registerUser(StoreTests.java:31)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -133,70 +99,61 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+          </exception> <!-- org.openqa.selenium.InvalidSelectorException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- addProductsToCart -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:storefront.testclasses.StoreTests@6ab4ba9f]" started-at="2022-05-20T20:10:59 BST" name="beforeMethod" finished-at="2022-05-20T20:10:59 BST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:storefront.testclasses.StoreTests@6ab4ba9f]" started-at="2022-05-20T20:11:04 BST" name="beforeMethod" finished-at="2022-05-20T20:11:04 BST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:storefront.testclasses.StoreTests@6ab4ba9f]" started-at="2022-05-20T20:11:04 BST" name="afterMethod" finished-at="2022-05-20T20:11:04 BST" duration-ms="0" status="PASS">
+        </test-method> <!-- registerUser -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:tests.StoreTests@72ee5d84]" started-at="2022-05-21T21:01:14 BST" name="afterMethod" finished-at="2022-05-21T21:01:14 BST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method signature="addProductsToCart(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:storefront.testclasses.StoreTests@6ab4ba9f]" started-at="2022-05-20T20:11:04 BST" name="addProductsToCart" data-provider="ProductList" finished-at="2022-05-20T20:11:15 BST" duration-ms="11062" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[126]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Sea Eagle Sport Kayak]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[Sports]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[None]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[YES]]>
-              </value>
-            </param>
-          </params>
+        <test-method signature="reRegisterSameUser()[pri:0, instance:tests.StoreTests@72ee5d84]" started-at="2022-05-21T21:01:14 BST" name="reRegisterSameUser" finished-at="2022-05-21T21:01:14 BST" depends-on-methods="tests.StoreTests.registerUser" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method tests.StoreTests.reRegisterSameUser() on instance tests.StoreTests@72ee5d84 depends on not successfully finished methods 
+[tests.StoreTests.registerUser() on instance tests.StoreTests@72ee5d84]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method tests.StoreTests.reRegisterSameUser() on instance tests.StoreTests@72ee5d84 depends on not successfully finished methods 
+[tests.StoreTests.registerUser() on instance tests.StoreTests@72ee5d84]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:149)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:808)
+at org.testng.TestRunner.run(TestRunner.java:603)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:429)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:423)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:383)
+at org.testng.SuiteRunner.run(SuiteRunner.java:326)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1249)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+at org.testng.TestNG.runSuites(TestNG.java:1092)
+at org.testng.TestNG.run(TestNG.java:1060)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- addProductsToCart -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:storefront.testclasses.StoreTests@6ab4ba9f]" started-at="2022-05-20T20:11:15 BST" name="afterMethod" finished-at="2022-05-20T20:11:15 BST" duration-ms="11" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="afterClass()[pri:0, instance:storefront.testclasses.StoreTests@6ab4ba9f]" started-at="2022-05-20T20:11:15 BST" name="afterClass" finished-at="2022-05-20T20:11:15 BST" duration-ms="0" status="PASS">
+        </test-method> <!-- reRegisterSameUser -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:tests.StoreTests@72ee5d84]" started-at="2022-05-21T21:01:14 BST" name="afterClass" finished-at="2022-05-21T21:01:14 BST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
-        <test-method is-config="true" signature="afterTest()[pri:0, instance:storefront.testclasses.StoreTests@6ab4ba9f]" started-at="2022-05-20T20:11:15 BST" name="afterTest" finished-at="2022-05-20T20:11:15 BST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:tests.StoreTests@72ee5d84]" started-at="2022-05-21T21:01:14 BST" name="afterTest" finished-at="2022-05-21T21:01:14 BST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
-        <test-method is-config="true" signature="afterSuite()[pri:0, instance:storefront.testclasses.StoreTests@6ab4ba9f]" started-at="2022-05-20T20:11:15 BST" name="afterSuite" finished-at="2022-05-20T20:11:15 BST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="afterSuite()[pri:0, instance:tests.StoreTests@72ee5d84]" started-at="2022-05-21T21:01:14 BST" name="afterSuite" finished-at="2022-05-21T21:01:14 BST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterSuite -->
-      </class> <!-- storefront.testclasses.StoreTests -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      </class> <!-- tests.StoreTests -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>
