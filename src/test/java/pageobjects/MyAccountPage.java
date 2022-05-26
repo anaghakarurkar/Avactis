@@ -10,6 +10,7 @@ import org.openqa.selenium.support.ui.LoadableComponent;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import pageobjects.elements.FixedTopMenu;
+import utilities.Settings;
 
 
 public class MyAccountPage extends LoadableComponent<MyAccountPage> {
@@ -25,9 +26,9 @@ public class MyAccountPage extends LoadableComponent<MyAccountPage> {
 	@FindBy(xpath="//div[contains(@class,\"note-success\")][text()='Account created successfully. You are now registered.']")
 	public WebElement accCreatedDiv;
 	
-	public MyAccountPage(WebDriver driver, WebDriverWait wait) {
+	public MyAccountPage(WebDriver driver) {
 		this.driver = driver;
-		this.wait = wait;
+		this.wait = Settings.getBase().explicitWait();
 		get();
 		PageFactory.initElements(driver, this);
 		PageFactory.initElements(driver, topMenu);

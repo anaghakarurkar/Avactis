@@ -11,7 +11,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.LoadableComponent;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import pageobjects.extra.SuccessfulRegList;
+import utilities.Settings;
 
 public class AdminCustomerPage extends LoadableComponent<AdminCustomerPage> {
 	String expectedPageTitle = "Customers - Avactis Shopping Cart";
@@ -54,10 +54,8 @@ public class AdminCustomerPage extends LoadableComponent<AdminCustomerPage> {
 	}
 
 	public void deleteCustomerTestData() {
-		System.out.println(SuccessfulRegList.emailList.size());
-
-		if (SuccessfulRegList.emailList != null) {
-			for (String email : SuccessfulRegList.emailList) {
+		String email = Settings.getCustomer().getEmail();
+		
 				for (int i = 0; i <= emailColumnList.size() - 1; i++) {
 					WebElement e = emailColumnList.get(i);
 					if (e.getText().equals(email)) {
@@ -71,8 +69,7 @@ public class AdminCustomerPage extends LoadableComponent<AdminCustomerPage> {
 						}
 					}
 				}
-			}
-		}
+			
 		Actions actions = new Actions(driver);
 		actions.moveToElement(adminTopLink);
 		actions.moveToElement(topMenuSignOut);

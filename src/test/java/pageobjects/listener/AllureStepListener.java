@@ -10,7 +10,8 @@ import io.qameta.allure.Attachment;
 import io.qameta.allure.listener.StepLifecycleListener;
 import io.qameta.allure.model.Status;
 import io.qameta.allure.model.StepResult;
-import utilities.Base;
+
+import utilities.Settings;
 
 public class AllureStepListener implements StepLifecycleListener {
 	
@@ -28,7 +29,7 @@ public class AllureStepListener implements StepLifecycleListener {
 
 		 @Attachment(value = "Screenshot", type = "image/png")
 		 public byte[] screenshot() {
-				WebDriver driverInstance = Base.driver;
+				WebDriver driverInstance = Settings.getBase().getDriver();
 				byte[] screenshotByte = null;
 					 screenshotByte = ((TakesScreenshot) driverInstance).getScreenshotAs(OutputType.BYTES);
 				return screenshotByte;

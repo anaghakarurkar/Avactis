@@ -1,9 +1,6 @@
 package pageobjects;
 
 import static org.testng.Assert.assertEquals;
-
-import java.util.HashSet;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -14,8 +11,8 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import pageobjects.elements.FixedTopMenu;
-import pageobjects.extra.Customer;
-import pageobjects.extra.SuccessfulRegList;
+import utilities.Customer;
+import utilities.Settings;
 
 public class RegisterUserPage extends LoadableComponent<RegisterUserPage> {
 	WebDriver driver;
@@ -67,35 +64,39 @@ public class RegisterUserPage extends LoadableComponent<RegisterUserPage> {
 
 	FixedTopMenu topMenu = new FixedTopMenu();
 
-	public RegisterUserPage(WebDriver driver, WebDriverWait wait) {
+	public RegisterUserPage(WebDriver driver) {
 		this.driver = driver;
-		this.wait = wait;
+		this.wait = Settings.getBase().explicitWait();
 		get();
 		PageFactory.initElements(driver, this);
 		PageFactory.initElements(driver, topMenu);
 	}
 
-	public boolean registerCustomer(Customer customerData) {
+	public boolean registerCustomer(Customer customer) {
 		//FILL THE REGISTRATION FORM
-		emailTbx.sendKeys(customerData.userName);
-		passwordTbx.sendKeys(customerData.password);
-		rePasswordTbx.sendKeys(customerData.password);
-		firstNameTbx.sendKeys(customerData.firstName);
-		lastNameTbx.sendKeys(customerData.lastName);
+
+		String[] address = customer.getAddress();
+		
+		emailTbx.sendKeys(customer.getEmail());
+		passwordTbx.sendKeys(customer.gePassword());
+		rePasswordTbx.sendKeys(customer.gePassword());
+		firstNameTbx.sendKeys(customer.getFirstName());
+		lastNameTbx.sendKeys(customer.getLastName());
 		
 		countryDropDown.click();
 		Select countryselect = new Select(countryDropDown);
-		countryselect.selectByVisibleText(customerData.country);
+		countryselect.selectByVisibleText(address[0]);
 
 		Select stateSelect = new Select(stateDropDown);
 		stateDropDown.click();
-		stateSelect.selectByVisibleText(customerData.state);
-
-		postCodeTbx.sendKeys(customerData.postCode);
-		cityTbx.sendKeys(customerData.city);
-		address1Tbx.sendKeys(customerData.add1);
-		address2Tbx.sendKeys(customerData.add2);
-		phoneTbx.sendKeys(customerData.phone);
+		stateSelect.selectByVisibleText(address[1]);
+		
+		postCodeTbx.sendKeys(address[2]);
+		cityTbx.sendKeys(address[3]);
+		address1Tbx.sendKeys(address[4]);
+		address2Tbx.sendKeys(address[5]);
+		
+		phoneTbx.sendKeys(customer.getPhoneNumber());
 
 		String oldUrl = driver.getCurrentUrl();
 
@@ -110,15 +111,7 @@ public class RegisterUserPage extends LoadableComponent<RegisterUserPage> {
 			FixedTopMenu.signInLink.click();
 			return false;
 		} else {
-			MyAccountPage accPage = new MyAccountPage(driver, wait);
-			if(SuccessfulRegList.emailList== null)
-			{
-				SuccessfulRegList.emailList = new HashSet<String>();
-			}
-			SuccessfulRegList.emailList.add(customerData.userName);
-			
-			StoreMainPage.loginEmail = customerData.userName;
-			StoreMainPage.loginPassword = customerData.password;
+			MyAccountPage accPage = new MyAccountPage(driver);
 			accPage.customerSignOut();
 			return true;
 		}

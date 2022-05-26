@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="TestSuite" time="118.939" tests="5" errors="0" skipped="0" failures="2">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="TestSuite" time="78.377" tests="4" errors="0" skipped="0" failures="2">
   <properties>
     <property name="java.specification.version" value="17"/>
     <property name="webdriver.chrome.driver" value="src\test\resources\browsers\chromedriver.exe"/>
@@ -16,7 +16,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="GB"/>
     <property name="sun.boot.library.path" value="C:\Users\angha\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.2.v20220201-1208\jre\bin"/>
-    <property name="sun.java.command" value="C:\Users\angha\AppData\Local\Temp\surefire11042193129185224034\surefirebooter13873058099574519340.jar C:\Users\angha\AppData\Local\Temp\surefire11042193129185224034 2022-05-25T12-03-20_365-jvmRun1 surefire9491287019506842664tmp surefire_09364632960347919432tmp"/>
+    <property name="sun.java.command" value="C:\Users\angha\AppData\Local\Temp\surefire9538671675896614600\surefirebooter13211773276475050359.jar C:\Users\angha\AppData\Local\Temp\surefire9538671675896614600 2022-05-26T16-17-37_282-jvmRun1 surefire148702058402641682tmp surefire_06374829258295370610tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="C:\Users\angha\eclipse-workspace\Avactis\target\test-classes;C:\Users\angha\eclipse-workspace\Avactis\target\classes;C:\Users\angha\.m2\repository\org\seleniumhq\selenium\selenium-java\4.1.4\selenium-java-4.1.4.jar;C:\Users\angha\.m2\repository\org\seleniumhq\selenium\selenium-api\4.1.4\selenium-api-4.1.4.jar;C:\Users\angha\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\4.1.4\selenium-chrome-driver-4.1.4.jar;C:\Users\angha\.m2\repository\com\google\auto\service\auto-service-annotations\1.0.1\auto-service-annotations-1.0.1.jar;C:\Users\angha\.m2\repository\com\google\auto\service\auto-service\1.0.1\auto-service-1.0.1.jar;C:\Users\angha\.m2\repository\com\google\auto\auto-common\1.2\auto-common-1.2.jar;C:\Users\angha\.m2\repository\com\google\guava\guava\31.1-jre\guava-31.1-jre.jar;C:\Users\angha\.m2\repository\com\google\guava\failureaccess\1.0.1\failureaccess-1.0.1.jar;C:\Users\angha\.m2\repository\com\google\guava\listenablefuture\9999.0-empty-to-avoid-conflict-with-guava\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar;C:\Users\angha\.m2\repository\org\checkerframework\checker-qual\3.12.0\checker-qual-3.12.0.jar;C:\Users\angha\.m2\repository\com\google\errorprone\error_prone_annotations\2.11.0\error_prone_annotations-2.11.0.jar;C:\Users\angha\.m2\repository\com\google\j2objc\j2objc-annotations\1.3\j2objc-annotations-1.3.jar;C:\Users\angha\.m2\repository\org\seleniumhq\selenium\selenium-chromium-driver\4.1.4\selenium-chromium-driver-4.1.4.jar;C:\Users\angha\.m2\repository\org\seleniumhq\selenium\selenium-json\4.1.4\selenium-json-4.1.4.jar;C:\Users\angha\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v100\4.1.4\selenium-devtools-v100-4.1.4.jar;C:\Users\angha\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v101\4.1.4\selenium-devtools-v101-4.1.4.jar;C:\Users\angha\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v85\4.1.4\selenium-devtools-v85-4.1.4.jar;C:\Users\angha\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v99\4.1.4\selenium-devtools-v99-4.1.4.jar;C:\Users\angha\.m2\repository\org\seleniumhq\selenium\selenium-edge-driver\4.1.4\selenium-edge-driver-4.1.4.jar;C:\Users\angha\.m2\repository\org\seleniumhq\selenium\selenium-firefox-driver\4.1.4\selenium-firefox-driver-4.1.4.jar;C:\Users\angha\.m2\repository\org\seleniumhq\selenium\selenium-ie-driver\4.1.4\selenium-ie-driver-4.1.4.jar;C:\Users\angha\.m2\repository\org\seleniumhq\selenium\selenium-opera-driver\4.1.4\selenium-opera-driver-4.1.4.jar;C:\Users\angha\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\4.1.4\selenium-remote-driver-4.1.4.jar;C:\Users\angha\.m2\repository\io\netty\netty-buffer\4.1.76.Final\netty-buffer-4.1.76.Final.jar;C:\Users\angha\.m2\repository\io\netty\netty-codec-http\4.1.76.Final\netty-codec-http-4.1.76.Final.jar;C:\Users\angha\.m2\repository\io\netty\netty-codec\4.1.76.Final\netty-codec-4.1.76.Final.jar;C:\Users\angha\.m2\repository\io\netty\netty-handler\4.1.76.Final\netty-handler-4.1.76.Final.jar;C:\Users\angha\.m2\repository\io\netty\netty-common\4.1.76.Final\netty-common-4.1.76.Final.jar;C:\Users\angha\.m2\repository\io\netty\netty-transport-classes-epoll\4.1.76.Final\netty-transport-classes-epoll-4.1.76.Final.jar;C:\Users\angha\.m2\repository\io\netty\netty-transport-classes-kqueue\4.1.76.Final\netty-transport-classes-kqueue-4.1.76.Final.jar;C:\Users\angha\.m2\repository\io\netty\netty-transport-native-epoll\4.1.76.Final\netty-transport-native-epoll-4.1.76.Final.jar;C:\Users\angha\.m2\repository\io\netty\netty-transport-native-kqueue\4.1.76.Final\netty-transport-native-kqueue-4.1.76.Final.jar;C:\Users\angha\.m2\repository\io\netty\netty-transport-native-unix-common\4.1.76.Final\netty-transport-native-unix-common-4.1.76.Final.jar;C:\Users\angha\.m2\repository\io\netty\netty-transport\4.1.76.Final\netty-transport-4.1.76.Final.jar;C:\Users\angha\.m2\repository\io\netty\netty-resolver\4.1.76.Final\netty-resolver-4.1.76.Final.jar;C:\Users\angha\.m2\repository\io\opentelemetry\opentelemetry-api\1.13.0\opentelemetry-api-1.13.0.jar;C:\Users\angha\.m2\repository\io\opentelemetry\opentelemetry-context\1.13.0\opentelemetry-context-1.13.0.jar;C:\Users\angha\.m2\repository\io\opentelemetry\opentelemetry-exporter-logging\1.13.0\opentelemetry-exporter-logging-1.13.0.jar;C:\Users\angha\.m2\repository\io\opentelemetry\opentelemetry-sdk-metrics\1.13.0-alpha\opentelemetry-sdk-metrics-1.13.0-alpha.jar;C:\Users\angha\.m2\repository\io\opentelemetry\opentelemetry-sdk-logs\1.13.0-alpha\opentelemetry-sdk-logs-1.13.0-alpha.jar;C:\Users\angha\.m2\repository\io\opentelemetry\opentelemetry-sdk-common\1.13.0\opentelemetry-sdk-common-1.13.0.jar;C:\Users\angha\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure-spi\1.13.0\opentelemetry-sdk-extension-autoconfigure-spi-1.13.0.jar;C:\Users\angha\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure\1.13.0-alpha\opentelemetry-sdk-extension-autoconfigure-1.13.0-alpha.jar;C:\Users\angha\.m2\repository\io\opentelemetry\opentelemetry-sdk-trace\1.13.0\opentelemetry-sdk-trace-1.13.0.jar;C:\Users\angha\.m2\repository\io\opentelemetry\opentelemetry-sdk\1.13.0\opentelemetry-sdk-1.13.0.jar;C:\Users\angha\.m2\repository\io\opentelemetry\opentelemetry-semconv\1.13.0-alpha\opentelemetry-semconv-1.13.0-alpha.jar;C:\Users\angha\.m2\repository\io\ous\jtoml\2.0.0\jtoml-2.0.0.jar;C:\Users\angha\.m2\repository\net\bytebuddy\byte-buddy\1.12.9\byte-buddy-1.12.9.jar;C:\Users\angha\.m2\repository\org\apache\commons\commons-exec\1.3\commons-exec-1.3.jar;C:\Users\angha\.m2\repository\org\asynchttpclient\async-http-client\2.12.3\async-http-client-2.12.3.jar;C:\Users\angha\.m2\repository\org\asynchttpclient\async-http-client-netty-utils\2.12.3\async-http-client-netty-utils-2.12.3.jar;C:\Users\angha\.m2\repository\io\netty\netty-codec-socks\4.1.60.Final\netty-codec-socks-4.1.60.Final.jar;C:\Users\angha\.m2\repository\io\netty\netty-handler-proxy\4.1.60.Final\netty-handler-proxy-4.1.60.Final.jar;C:\Users\angha\.m2\repository\io\netty\netty-transport-native-epoll\4.1.60.Final\netty-transport-native-epoll-4.1.60.Final-linux-x86_64.jar;C:\Users\angha\.m2\repository\io\netty\netty-transport-native-kqueue\4.1.60.Final\netty-transport-native-kqueue-4.1.60.Final-osx-x86_64.jar;C:\Users\angha\.m2\repository\org\reactivestreams\reactive-streams\1.0.3\reactive-streams-1.0.3.jar;C:\Users\angha\.m2\repository\com\typesafe\netty\netty-reactive-streams\2.0.4\netty-reactive-streams-2.0.4.jar;C:\Users\angha\.m2\repository\com\sun\activation\jakarta.activation\1.2.2\jakarta.activation-1.2.2.jar;C:\Users\angha\.m2\repository\org\seleniumhq\selenium\selenium-http\4.1.4\selenium-http-4.1.4.jar;C:\Users\angha\.m2\repository\dev\failsafe\failsafe\3.2.3\failsafe-3.2.3.jar;C:\Users\angha\.m2\repository\org\seleniumhq\selenium\selenium-safari-driver\4.1.4\selenium-safari-driver-4.1.4.jar;C:\Users\angha\.m2\repository\org\seleniumhq\selenium\selenium-support\4.1.4\selenium-support-4.1.4.jar;C:\Users\angha\.m2\repository\org\testng\testng\7.5\testng-7.5.jar;C:\Users\angha\.m2\repository\com\google\code\findbugs\jsr305\3.0.1\jsr305-3.0.1.jar;C:\Users\angha\.m2\repository\com\beust\jcommander\1.78\jcommander-1.78.jar;C:\Users\angha\.m2\repository\org\webjars\jquery\3.5.1\jquery-3.5.1.jar;C:\Users\angha\.m2\repository\org\apache\poi\poi\5.2.2\poi-5.2.2.jar;C:\Users\angha\.m2\repository\commons-codec\commons-codec\1.15\commons-codec-1.15.jar;C:\Users\angha\.m2\repository\org\apache\commons\commons-collections4\4.4\commons-collections4-4.4.jar;C:\Users\angha\.m2\repository\org\apache\commons\commons-math3\3.6.1\commons-math3-3.6.1.jar;C:\Users\angha\.m2\repository\commons-io\commons-io\2.11.0\commons-io-2.11.0.jar;C:\Users\angha\.m2\repository\com\zaxxer\SparseBitSet\1.2\SparseBitSet-1.2.jar;C:\Users\angha\.m2\repository\org\apache\poi\poi-ooxml\5.2.2\poi-ooxml-5.2.2.jar;C:\Users\angha\.m2\repository\org\apache\poi\poi-ooxml-lite\5.2.2\poi-ooxml-lite-5.2.2.jar;C:\Users\angha\.m2\repository\org\apache\xmlbeans\xmlbeans\5.0.3\xmlbeans-5.0.3.jar;C:\Users\angha\.m2\repository\org\apache\commons\commons-compress\1.21\commons-compress-1.21.jar;C:\Users\angha\.m2\repository\com\github\virtuald\curvesapi\1.07\curvesapi-1.07.jar;C:\Users\angha\.m2\repository\org\apache\logging\log4j\log4j-core\2.17.2\log4j-core-2.17.2.jar;C:\Users\angha\.m2\repository\org\apache\logging\log4j\log4j-api\2.17.2\log4j-api-2.17.2.jar;C:\Users\angha\.m2\repository\io\qameta\allure\allure-testng\2.18.0\allure-testng-2.18.0.jar;C:\Users\angha\.m2\repository\io\qameta\allure\allure-java-commons\2.18.0\allure-java-commons-2.18.0.jar;C:\Users\angha\.m2\repository\io\qameta\allure\allure-model\2.18.0\allure-model-2.18.0.jar;C:\Users\angha\.m2\repository\io\qameta\allure\allure-test-filter\2.18.0\allure-test-filter-2.18.0.jar;C:\Users\angha\.m2\repository\org\slf4j\slf4j-api\1.7.36\slf4j-api-1.7.36.jar;C:\Users\angha\.m2\repository\org\slf4j\slf4j-simple\1.7.36\slf4j-simple-1.7.36.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -31,7 +31,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\angha\AppData\Local\Temp\surefire11042193129185224034\surefirebooter13873058099574519340.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\angha\AppData\Local\Temp\surefire9538671675896614600\surefirebooter13211773276475050359.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="17.0.2+8"/>
@@ -58,25 +58,25 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="61.0"/>
   </properties>
-  <testcase name="verifyRegisterUser[anaghakarurkar@gmail.com, anagha123, Anagha, Karurkar, United Kingdom (Great Britain), Hertfordshire, HA5 1ED, London, 1, Loudwater lane, Rickmansworth, 7897656543](1)" classname="tests.StoreTests" time="12.126">
-    <system-err><![CDATA[Starting ChromeDriver 101.0.4951.41 (93c720db8323b3ec10d056025ab95c23a31997c9-refs/branch-heads/4951@{#904}) on port 55713
+  <testcase name="verifyRegisterUser" classname="tests.StoreTests" time="11.22">
+    <system-err><![CDATA[Starting ChromeDriver 101.0.4951.41 (93c720db8323b3ec10d056025ab95c23a31997c9-refs/branch-heads/4951@{#904}) on port 58263
 Only local connections are allowed.
 Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
 ChromeDriver was started successfully.
-May 25, 2022 12:03:24 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+May 26, 2022 4:17:42 PM org.openqa.selenium.remote.ProtocolHandshake createSession
 INFO: Detected dialect: W3C
-May 25, 2022 12:03:24 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+May 26, 2022 4:17:43 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 INFO: Found exact CDP implementation for version 101
 ]]></system-err>
   </testcase>
-  <testcase name="verifyRegisterUser[anaghakarurkar@gmail.com, anagha, Anagha, Karurkar, United Kingdom (Great Britain), Hertfordshire, HA5 1ED, London, 1, Loudwater lane, Rickmansworth, 7897656543](2)" classname="tests.StoreTests" time="22.092">
+  <testcase name="verifyReRegisterUser" classname="tests.StoreTests" time="21.689">
     <failure message="expected [true] but found [false]" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: expected [true] but found [false]
 	at org.testng.Assert.fail(Assert.java:110)
 	at org.testng.Assert.failNotEquals(Assert.java:1413)
 	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
 	at org.testng.Assert.assertEquals(Assert.java:131)
 	at org.testng.Assert.assertEquals(Assert.java:643)
-	at tests.StoreTests.verifyRegisterUser(StoreTests.java:34)
+	at tests.StoreTests.verifyReRegisterUser(StoreTests.java:43)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -111,27 +111,27 @@ INFO: Found exact CDP implementation for version 101
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:581)
 ]]></failure>
   </testcase>
-  <testcase name="verifyLoginUser[anaghakarurkar@gmail.com, anagha123](1)" classname="tests.StoreTests" time="6.822">
-    <system-out><![CDATA[I am in onTestFailure method verifyRegisterUser failed
-Screenshot captured for test case: verifyRegisterUser
+  <testcase name="verifyLogin" classname="tests.StoreTests" time="6.403">
+    <system-out><![CDATA[I am in onTestFailure method verifyReRegisterUser failed
+Screenshot captured for test case: verifyReRegisterUser
 ]]></system-out>
     <system-err><![CDATA[[main] ERROR io.qameta.allure.AllureLifecycle - Could not add attachment: no test is running
 [main] ERROR io.qameta.allure.AllureLifecycle - Could not add attachment: no test is running
 ]]></system-err>
   </testcase>
-  <testcase name="verifyLoginUser[anaghakarurkar@gmail.com, anagha](2)" classname="tests.StoreTests" time="3.914">
-    <failure message="expected [http://localhost/Avactis/home.php] but found [http://localhost/Avactis/sign-in.php?timestamp=1653476650]" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: expected [http://localhost/Avactis/home.php] but found [http://localhost/Avactis/sign-in.php?timestamp=1653476650]
+  <testcase name="verifyInvalidLogin" classname="tests.StoreTests" time="3.334">
+    <failure message="expected [http://localhost/Avactis/home.php] but found [http://localhost/Avactis/sign-in.php?timestamp=1653578306]" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: expected [http://localhost/Avactis/home.php] but found [http://localhost/Avactis/sign-in.php?timestamp=1653578306]
 	at org.testng.Assert.fail(Assert.java:110)
 	at org.testng.Assert.failNotEquals(Assert.java:1413)
 	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
 	at org.testng.Assert.assertEquals(Assert.java:131)
 	at org.testng.Assert.assertEquals(Assert.java:655)
 	at org.testng.Assert.assertEquals(Assert.java:665)
-	at pageobjects.MyAccountPage.isLoaded(MyAccountPage.java:43)
+	at pageobjects.MyAccountPage.isLoaded(MyAccountPage.java:44)
 	at org.openqa.selenium.support.ui.LoadableComponent.get(LoadableComponent.java:52)
-	at pageobjects.MyAccountPage.<init>(MyAccountPage.java:31)
-	at pageobjects.SignInPage.login(SignInPage.java:73)
-	at tests.StoreTests.verifyLoginUser(StoreTests.java:42)
+	at pageobjects.MyAccountPage.<init>(MyAccountPage.java:32)
+	at pageobjects.SignInPage.login(SignInPage.java:80)
+	at tests.StoreTests.verifyInvalidLogin(StoreTests.java:60)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -165,19 +165,5 @@ Screenshot captured for test case: verifyRegisterUser
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:595)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:581)
 ]]></failure>
-  </testcase>
-  <testcase name="verifyProductsAddedToCart" classname="tests.StoreTests" time="36.781">
-    <system-out><![CDATA[I am in onTestFailure method verifyLoginUser failed
-Screenshot captured for test case: verifyLoginUser
-Avactis T-ShirtAdded to the cart!
-UpAdded to the cart!
-Sea Eagle Sport KayakAdded to the cart!
-Avactis T-ShirtAdded to the cart!
-UpAdded to the cart!
-Sea Eagle Sport KayakAdded to the cart!
-]]></system-out>
-    <system-err><![CDATA[[main] ERROR io.qameta.allure.AllureLifecycle - Could not add attachment: no test is running
-[main] ERROR io.qameta.allure.AllureLifecycle - Could not add attachment: no test is running
-]]></system-err>
   </testcase>
 </testsuite>

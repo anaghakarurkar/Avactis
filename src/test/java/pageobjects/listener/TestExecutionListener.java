@@ -6,7 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 import io.qameta.allure.Attachment;
-import utilities.Base;
+import utilities.Settings;
 
 public class TestExecutionListener implements ITestListener {
 	private WebDriver driver;
@@ -20,8 +20,9 @@ public class TestExecutionListener implements ITestListener {
 	
 	public void onTestFailure(ITestResult iTestResult) {
 	    System.out.println("I am in onTestFailure method " + getTestMethodName(iTestResult) + " failed");
-	   
-	    driver = Base.driver; 
+	
+	    driver = Settings.getBase().getDriver(); 
+	    
 	     if(driver instanceof WebDriver) {
 	    	 System.out.println("Screenshot captured for test case: " + getTestMethodName(iTestResult));
 	    	 saveFailureScreenShot(driver);

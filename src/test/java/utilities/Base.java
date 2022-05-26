@@ -13,32 +13,20 @@ import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public final class Base {
-	public static  WebDriver driver;
-	private  String driverPath;
-	private  WebDriverWait wait;
-	private  String avactisStorePath;
-	private  String avactisAdminPath;
-	private  String adminUsername;
-	private  String adminPassword;
-    
-    
-    public static enum Browser {
-		CHROME, MICROSOFTEDGE
-	};
-
-	private static Browser browserName;
-
+	private static  WebDriver driver;
+	private static String driverPath;
+	private static WebDriverWait wait;
+	private static String avactisStorePath;
+	private static String avactisAdminPath;
+	private static String adminUsername;
+	private static String adminPassword;
+    private static String chosenBrowser;
+    private static long waitSeconds;
+  
 	public Base() {
-		this(Browser.CHROME);
-	}
-
-	public Base(Browser brName) {
-		browserName = brName;
 		setProperties();
 	}
 	
-	
-
 	private void setProperties() {
 		// get all properties from config.properties and initialise class data members
 
@@ -52,33 +40,33 @@ public final class Base {
 
 			// Load properties file in InputStream
 			prop.load(fileInput);
-
-			driverPath = prop.getProperty(browserName.toString().toLowerCase());
+		
 			avactisStorePath = prop.getProperty("storefrontlink");
 			avactisAdminPath = prop.getProperty("adminlink");
+
 			adminUsername = prop.getProperty("adminemail");
 			adminPassword = prop.getProperty("adminpassword");
 			
-			launchBrowser();
-			wait = new WebDriverWait(driver,
-			Duration.ofSeconds(Long.parseLong(prop.getProperty("waitinseconds"))));
-
+			chosenBrowser = prop.getProperty("chosenbrowser");
+			driverPath = prop.getProperty(chosenBrowser);
+			waitSeconds =Long.parseLong(prop.getProperty("waitinseconds"));
+			
 			fileInput.close();
 		} catch (IOException e) {
 			System.out.println("Can not find/load config.properties file");
 		}
 	}
 
-	private void launchBrowser() {
+	public  void launchBrowser() {
 		// This method create new instance of a driver in incognito mode
-		switch (browserName) {
-		case CHROME:
+		switch (chosenBrowser) {
+		case "chrome":
 			System.setProperty("webdriver.chrome.driver", driverPath);
 			ChromeOptions chromeOptions = new ChromeOptions();
 			chromeOptions.addArguments("--incognito");
 			driver = new ChromeDriver(chromeOptions);
 			break;
-		case MICROSOFTEDGE:
+		case "microsoftedge":
 			System.setProperty("webdriver.edge.driver", driverPath);
 			EdgeOptions edgeOptions = new EdgeOptions();
 			edgeOptions.addArguments("InPrivate");
@@ -87,15 +75,15 @@ public final class Base {
 		default:
 			break;
 		}
+		
+		wait = new WebDriverWait(driver,
+				Duration.ofSeconds(waitSeconds));
+		
 		driver.manage().window().maximize();
 	}
 
-		
-	public  void setExplicitWait(Duration duration) {
-		wait = new WebDriverWait(driver, duration);
-	}
 
-	public   WebDriverWait explicitWait() {
+	public WebDriverWait explicitWait() {
 		return wait;
 	}
 
@@ -127,7 +115,5 @@ public final class Base {
 	public  void quitAllBrowserWindows() {
 		driver.quit();
 	}
-	
-	
 	
 }

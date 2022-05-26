@@ -9,24 +9,23 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Suite</th></tr>
-<tr><td><a href="#t0">Test</a></td><td class="num">3</td><td class="num">0</td><td class="num">0</td><td class="num attn">2</td><td class="num">117,849</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Test</a></td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num attn">2</td><td class="num">77,313</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="2">tests.StoreTests</td><td><a href="#m0">verifyLoginUser</a></td><td rowspan="1">1653476648429</td><td rowspan="1">3913</td></tr><tr class="failedeven"><td><a href="#m1">verifyRegisterUser</a></td><td rowspan="1">1653476619246</td><td rowspan="1">22062</td></tr><tr><th colspan="4">Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="3">tests.StoreTests</td><td><a href="#m2">verifyLoginUser</a></td><td rowspan="1">1653476641605</td><td rowspan="1">6821</td></tr><tr class="passedeven"><td><a href="#m3">verifyProductsAddedToCart</a></td><td rowspan="1">1653476652543</td><td rowspan="1">36782</td></tr><tr class="passedeven"><td><a href="#m4">verifyRegisterUser</a></td><td rowspan="1">1653476607116</td><td rowspan="1">12116</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="2">tests.StoreTests</td><td><a href="#m0">verifyInvalidLogin</a></td><td rowspan="1">1653578304566</td><td rowspan="1">3333</td></tr><tr class="failedeven"><td><a href="#m1">verifyReRegisterUser</a></td><td rowspan="1">1653578276254</td><td rowspan="1">21674</td></tr><tr><th colspan="4">Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="2">tests.StoreTests</td><td><a href="#m2">verifyLogin</a></td><td rowspan="1">1653578298159</td><td rowspan="1">6403</td></tr><tr class="passedeven"><td><a href="#m3">verifyRegisterUser</a></td><td rowspan="1">1653578265024</td><td rowspan="1">11207</td></tr></tbody>
 </table>
-<h2>Test</h2><h3 id="m0">tests.StoreTests#verifyLoginUser</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>anaghakarurkar@gmail.com</td><td>anagha</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">java.lang.AssertionError: expected [http://localhost/Avactis/home.php] but found [http://localhost/Avactis/sign-in.php?timestamp=1653476650]
-	at pageobjects.MyAccountPage.isLoaded(MyAccountPage.java:43)
+<h2>Test</h2><h3 id="m0">tests.StoreTests#verifyInvalidLogin</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [http://localhost/Avactis/home.php] but found [http://localhost/Avactis/sign-in.php?timestamp=1653578306]
+	at pageobjects.MyAccountPage.isLoaded(MyAccountPage.java:44)
 	at org.openqa.selenium.support.ui.LoadableComponent.get(LoadableComponent.java:52)
-	at pageobjects.MyAccountPage.&lt;init&gt;(MyAccountPage.java:31)
-	at pageobjects.SignInPage.login(SignInPage.java:73)
-	at tests.StoreTests.verifyLoginUser(StoreTests.java:42)
+	at pageobjects.MyAccountPage.&lt;init&gt;(MyAccountPage.java:32)
+	at pageobjects.SignInPage.login(SignInPage.java:80)
+	at tests.StoreTests.verifyInvalidLogin(StoreTests.java:60)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 ... Removed 37 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">tests.StoreTests#verifyRegisterUser</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th><th>Parameter #5</th><th>Parameter #6</th><th>Parameter #7</th><th>Parameter #8</th><th>Parameter #9</th><th>Parameter #10</th><th>Parameter #11</th></tr><tr class="param stripe"><td>anaghakarurkar@gmail.com</td><td>anagha</td><td>Anagha</td><td>Karurkar</td><td>United Kingdom (Great Britain)</td><td>Hertfordshire</td><td>HA5 1ED</td><td>London</td><td>1, Loudwater lane</td><td>Rickmansworth</td><td>7897656543</td></tr><tr><th colspan="11">Exception</th></tr><tr><td colspan="11"><div class="stacktrace">java.lang.AssertionError: expected [true] but found [false]
-	at tests.StoreTests.verifyRegisterUser(StoreTests.java:34)
+<h3 id="m1">tests.StoreTests#verifyReRegisterUser</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [true] but found [false]
+	at tests.StoreTests.verifyReRegisterUser(StoreTests.java:43)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 ... Removed 36 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">tests.StoreTests#verifyLoginUser</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>anaghakarurkar@gmail.com</td><td>anagha123</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m3">tests.StoreTests#verifyProductsAddedToCart</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m4">tests.StoreTests#verifyRegisterUser</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th><th>Parameter #5</th><th>Parameter #6</th><th>Parameter #7</th><th>Parameter #8</th><th>Parameter #9</th><th>Parameter #10</th><th>Parameter #11</th></tr><tr class="param stripe"><td>anaghakarurkar@gmail.com</td><td>anagha123</td><td>Anagha</td><td>Karurkar</td><td>United Kingdom (Great Britain)</td><td>Hertfordshire</td><td>HA5 1ED</td><td>London</td><td>1, Loudwater lane</td><td>Rickmansworth</td><td>7897656543</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">tests.StoreTests#verifyLogin</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">tests.StoreTests#verifyRegisterUser</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

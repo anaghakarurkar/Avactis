@@ -5,14 +5,14 @@
     <classes>
       <class name="tests.StoreTests">
         <methods>
+          <include name="verifyReRegisterUser"/>
           <include name="beforeTest"/>
-          <include name="verifyLoginUser" invocation-numbers="1"/>
           <include name="afterTest"/>
           <include name="afterClass"/>
           <include name="beforeSuite"/>
           <include name="afterSuite"/>
           <include name="afterMethod"/>
-          <include name="verifyRegisterUser" invocation-numbers="1"/>
+          <include name="verifyInvalidLogin"/>
           <include name="beforeMethod"/>
           <include name="beforeClass"/>
         </methods>

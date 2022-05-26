@@ -16,7 +16,7 @@ import pageobjects.extra.Product;
 import utilities.Base;
 
 public class StoreMainPage extends LoadableComponent<StoreMainPage> {
-	public Base baseObj;
+	private Base base ;
 	private WebDriver driver;
 	private String storeURL;
 	private WebDriverWait wait;
@@ -28,12 +28,12 @@ public class StoreMainPage extends LoadableComponent<StoreMainPage> {
 	private FixedTopMenu topMenu = new FixedTopMenu();
   //  public static String customerListArr[];
     
-	public StoreMainPage(Base.Browser brName) {
-		baseObj = new Base(brName);
-		this.driver = baseObj.getDriver();
-		this.storeURL = baseObj.getAvactisStoreFrontURL();
-		this.adminSiteUrl = baseObj.getAvactisAdminURL();
-		this.wait = baseObj.explicitWait();
+	public StoreMainPage(Base base) {
+		this.base = base;
+		this.driver = base.getDriver();
+		this.storeURL = base.getAvactisStoreFrontURL();
+		this.adminSiteUrl = base.getAvactisAdminURL();
+		this.wait = base.explicitWait();
 		get();
 		PageFactory.initElements(driver, topMenu);
 	}
@@ -51,12 +51,11 @@ public class StoreMainPage extends LoadableComponent<StoreMainPage> {
 
 	public SignInPage openSignInPage() {
 		FixedTopMenu.signInLink.click();
-		SignInPage signInPage = new SignInPage(driver, wait);
+		SignInPage signInPage = new SignInPage(driver);
 		return signInPage;
 	}
 
 	// ADD CHOSEN PRODUCTS TO THE CART
-	
 	
 	public void addItemsToTheCart() {
 		try {
@@ -136,12 +135,23 @@ public class StoreMainPage extends LoadableComponent<StoreMainPage> {
 		product.addedToTheCart = commonProductsPage.addToCart();
 		return product.addedToTheCart;
 	}
+	
+	public void checkout(String userType) {
+		FixedTopMenu.checkoutLink.click();
+		CheckoutPage checkoutPage = new CheckoutPage(driver, wait);
+		if(userType.endsWith("GUEST"))
+		{
+			
+		}else if(userType.equals("REGISTERED")) {
+		checkoutPage.checkoutAsCustomer();	
+		}
+	}
 
 	public void deleteAllData() {
 		driver.get(adminSiteUrl);
 		AdminMainPage adminPage = new AdminMainPage(driver, wait);
-		AdminMainPage.adminEmail = baseObj.getAdminUserEmail();
-		AdminMainPage.adminPass = baseObj.getAdminPassword();
+		AdminMainPage.adminEmail = base.getAdminUserEmail();
+		AdminMainPage.adminPass = base.getAdminPassword();
 		adminPage.deleteCustomer();
 	}
 }

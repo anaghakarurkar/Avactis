@@ -10,14 +10,13 @@ import org.openqa.selenium.support.ui.LoadableComponent;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import pageobjects.elements.FixedTopMenu;
-import pageobjects.extra.Customer;
+import utilities.Customer;
+import utilities.Settings;
 
 public class SignInPage extends LoadableComponent<SignInPage> {
-	String expectedPageTitle = "Avactis Demo Store";
-	WebDriver driver;
-	WebDriverWait wait;
-	String[] customerData;
-
+	private String expectedPageTitle = "Avactis Demo Store";
+	private WebDriver driver;
+	private Customer customer;
 	private FixedTopMenu topMenu = new FixedTopMenu();
 
 	@FindBy(xpath = "//a/button[text()='Register']")
@@ -39,9 +38,9 @@ public class SignInPage extends LoadableComponent<SignInPage> {
 	@FindBy(xpath = "//input[@value='Sign In']")
 	public WebElement signInsubmitBtn;
 
-	public SignInPage(WebDriver driver, WebDriverWait wait) {
+	public SignInPage(WebDriver driver) {
 		this.driver = driver;
-		this.wait = wait;
+		this.customer  = Settings.getCustomer();
 		get();
 		PageFactory.initElements(driver, this);
 		PageFactory.initElements(driver, topMenu);
@@ -57,30 +56,34 @@ public class SignInPage extends LoadableComponent<SignInPage> {
 		assertEquals(driver.getTitle(), expectedPageTitle);
 	}
 
-	public boolean registerUser(Customer customer) {
+	public boolean registerUser() {
 		registerBtn.click();
-		RegisterUserPage registerPageObj = new RegisterUserPage(driver, wait);
+		RegisterUserPage registerPageObj = new RegisterUserPage(driver);
 		return registerPageObj.registerCustomer(customer);
 	}
 
-	public boolean login(String userName, String password) {
- 		signInemailTextBox.sendKeys(userName);
-		signInPasswordTextBox.sendKeys(password);
-		
-		if(!rememberMeCheckBox.isSelected())
+	public boolean login(String loginType) {
+		String email = customer.getEmail();
+		String passwd = customer.gePassword();
+
+		signInemailTextBox.sendKeys(email);
+
+		if (loginType.equals("Invalid Credentials")) {
+			signInPasswordTextBox.sendKeys("invalid123");
+		} else if (loginType.equals("Valid Credentials")) {
+			signInPasswordTextBox.sendKeys(passwd);
+		}
+
+		if (!rememberMeCheckBox.isSelected())
 			rememberMeCheckBox.click();
 		signInsubmitBtn.click();
-		MyAccountPage accPage = new MyAccountPage(driver, wait);
-		if (accPage.signInSuccess == true)
-		{
+		MyAccountPage accPage = new MyAccountPage(driver);
+		if (accPage.signInSuccess == true) {
 			accPage.signOutLink.click();
-		return true;
-		}else {
+			return true;
+		} else {
 			return false;
 		}
 	}
 
-	public boolean login() {
-		return true;
-	}
 }
