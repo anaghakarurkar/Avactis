@@ -5,8 +5,8 @@
     <classes>
       <class name="tests.StoreTests">
         <methods>
-          <include name="verifyReRegisterUser"/>
           <include name="beforeTest"/>
+          <include name="verifyReRegisterUser"/>
           <include name="afterTest"/>
           <include name="afterClass"/>
           <include name="beforeSuite"/>

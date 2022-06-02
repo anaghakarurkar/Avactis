@@ -7,7 +7,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import org.openqa.selenium.support.ui.LoadableComponent;
-import org.openqa.selenium.support.ui.WebDriverWait;
+
 
 import pageobjects.elements.FixedTopMenu;
 import utilities.Customer;
@@ -62,7 +62,7 @@ public class SignInPage extends LoadableComponent<SignInPage> {
 		return registerPageObj.registerCustomer(customer);
 	}
 
-	public boolean login(String loginType) {
+	public MyAccountPage login(String loginType) {
 		String email = customer.getEmail();
 		String passwd = customer.gePassword();
 
@@ -76,14 +76,12 @@ public class SignInPage extends LoadableComponent<SignInPage> {
 
 		if (!rememberMeCheckBox.isSelected())
 			rememberMeCheckBox.click();
+		
 		signInsubmitBtn.click();
+		
 		MyAccountPage accPage = new MyAccountPage(driver);
-		if (accPage.signInSuccess == true) {
-			accPage.signOutLink.click();
-			return true;
-		} else {
-			return false;
-		}
+		
+		return accPage;
 	}
 
 }

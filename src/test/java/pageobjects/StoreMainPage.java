@@ -10,13 +10,16 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.LoadableComponent;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import dataproviders.ProductsListDP;
 import pageobjects.elements.FixedTopMenu;
-import pageobjects.extra.Product;
 import utilities.Base;
+import utilities.Product;
+import utilities.ProductsList;
+import utilities.Settings;
+import utilities.Log;
+
 
 public class StoreMainPage extends LoadableComponent<StoreMainPage> {
-	private Base base ;
+	private Base base;
 	private WebDriver driver;
 	private String storeURL;
 	private WebDriverWait wait;
@@ -24,10 +27,11 @@ public class StoreMainPage extends LoadableComponent<StoreMainPage> {
 	public static String loginEmail = "";
 	public static String loginPassword = "";
 	private String adminSiteUrl;
+	
 	// All common WebElements are defined in this file
 	private FixedTopMenu topMenu = new FixedTopMenu();
-  //  public static String customerListArr[];
-    
+	// public static String customerListArr[];
+
 	public StoreMainPage(Base base) {
 		this.base = base;
 		this.driver = base.getDriver();
@@ -56,36 +60,49 @@ public class StoreMainPage extends LoadableComponent<StoreMainPage> {
 	}
 
 	// ADD CHOSEN PRODUCTS TO THE CART
-	
-	public void addItemsToTheCart() {
+	public Boolean addItemsToTheCart() {
+		Boolean allItemsAdded = true;
+
 		try {
-		Object[][] pList = new ProductsListDP().getProductsList();
-		Product chosenItem;
-		for(int i=0; i<= pList.length-1; i++) {
-			 chosenItem = new Product((String)pList[i][0],(String) pList[i][1],(String)pList[i][2],(String)pList[i][3]);
-			 Boolean success = clickProductLink(chosenItem);
-			 if(success == true) {
-				 System.out.println(chosenItem.name + "Added to the cart!");
-			 } else {
-				 System.err.println(chosenItem.name + " Add cart - Error");
-			 }
+			Object[][] pList = new ProductsList().getProductsList();
+			Product chosenItem;
+			Settings.chosenProducts = new Product[pList.length];
+
+			for (int i = 0; i <= pList.length - 1; i++) {
+				chosenItem = new Product(Integer.parseInt((String) pList[i][0]) , (String) pList[i][1], (String) pList[i][2],
+						(String) pList[i][3], Integer.parseInt((String)pList[i][5]) ,Float.valueOf((String) pList[i][6]));
+
+				System.out.println(chosenItem.name);
+				Boolean success = clickProductLink(chosenItem);
+				Settings.chosenProducts[i] = chosenItem;
+
+				// check if  product is added  to the cart successfully
+				if (success == true) {
+					Log.info(chosenItem.name + " Added to the Cart!");
+
+				} else {
+					Log.error(chosenItem.name + " - problem adding to the Cart.");
+					allItemsAdded = false;
+				}
+			}
+		} catch (IOException e) {
+			Log.error("Can't open Products list file");
+			allItemsAdded = false;
 		}
-		}catch(IOException e) {
-			System.out.println("Can't open Products list file");
-		}
+		return allItemsAdded;
 	}
-	
+
 	public Boolean clickProductLink(Product product) {
 		ProductsPage commonProductsPage;
 		Actions actions = new Actions(driver);
-		
+
 		switch (product.category.toLowerCase()) {
 		case "apparel":
 			FixedTopMenu.apparelMenu.click();
 			break;
 		case "computers":
 			actions.moveToElement(FixedTopMenu.computersMenu);
-			//*******************COMPUTES - SUB MENU OPTIONS ************************
+			// *******************COMPUTES - SUB MENU OPTIONS ************************
 			switch (product.subCategory.toLowerCase()) {
 			case "notebooks":
 				actions.moveToElement(FixedTopMenu.notebooksMenuItem);
@@ -96,13 +113,13 @@ public class StoreMainPage extends LoadableComponent<StoreMainPage> {
 			default:
 				break;
 			}
-			//***********************END OF SUBMENU OPTIONS**************************
+			// ***********************END OF SUBMENU OPTIONS**************************
 			actions.click();
 			actions.perform();
 			break;
 		case "dvd":
 			actions.moveToElement(FixedTopMenu.dvdMenu);
-			//*******************DVD - SUB MENU OPTIONS *****************************
+			// *******************DVD - SUB MENU OPTIONS *****************************
 			switch (product.subCategory.toLowerCase()) {
 			case "tv on dvd":
 				actions.moveToElement(FixedTopMenu.tvOnDvdMenuItem);
@@ -116,7 +133,7 @@ public class StoreMainPage extends LoadableComponent<StoreMainPage> {
 			default:
 				break;
 			}
-			//***********************END OF SUBMENU OPTIONS**************************
+			// ***********************END OF SUBMENU OPTIONS**************************
 			actions.click();
 			actions.perform();
 			break;
@@ -135,16 +152,16 @@ public class StoreMainPage extends LoadableComponent<StoreMainPage> {
 		product.addedToTheCart = commonProductsPage.addToCart();
 		return product.addedToTheCart;
 	}
-	
-	public void checkout(String userType) {
+
+	public CheckoutPage checkout(String userType) {
 		FixedTopMenu.checkoutLink.click();
 		CheckoutPage checkoutPage = new CheckoutPage(driver, wait);
-		if(userType.endsWith("GUEST"))
-		{
-			
-		}else if(userType.equals("REGISTERED")) {
-		checkoutPage.checkoutAsCustomer();	
+		if (userType.endsWith("GUEST")) {
+			checkoutPage.checkoutAsGuest();
+		} else if (userType.equals("REGISTERED")) {
+			checkoutPage.checkoutAsCustomer();
 		}
+		return checkoutPage;
 	}
 
 	public void deleteAllData() {
@@ -153,5 +170,12 @@ public class StoreMainPage extends LoadableComponent<StoreMainPage> {
 		AdminMainPage.adminEmail = base.getAdminUserEmail();
 		AdminMainPage.adminPass = base.getAdminPassword();
 		adminPage.deleteCustomer();
+	}
+
+	public boolean verifyCart() {	
+		FixedTopMenu.myCartLink.click();
+		MyCartPage cartPage = new MyCartPage(driver);
+		Boolean status = cartPage.verifyCart(Settings.chosenProducts);
+		return status;
 	}
 }

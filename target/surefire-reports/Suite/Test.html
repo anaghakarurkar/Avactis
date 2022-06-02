@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>2/2/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>3/2/0</td>
 </tr><tr>
-<td>Started on:</td><td>Thu May 26 16:17:41 BST 2022</td>
+<td>Started on:</td><td>Thu Jun 02 20:09:24 BST 2022</td>
 </tr>
-<tr><td>Total time:</td><td>77 seconds (77313 ms)</td>
+<tr><td>Total time:</td><td>209 seconds (209797 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,15 +76,15 @@ function toggleAllBoxes() {
 </tr>
 <tr>
 <td title='tests.StoreTests.verifyInvalidLogin()'><b>verifyInvalidLogin</b><br>Test class: tests.StoreTests</td>
-<td><div><pre>java.lang.AssertionError: expected [http://localhost/Avactis/home.php] but found [http://localhost/Avactis/sign-in.php?timestamp=1653578306]
+<td><div><pre>java.lang.AssertionError: expected [http://localhost/Avactis/home.php] but found [http://localhost/Avactis/sign-in.php?timestamp=1654197047]
 	at pageobjects.MyAccountPage.isLoaded(MyAccountPage.java:44)
 	at org.openqa.selenium.support.ui.LoadableComponent.get(LoadableComponent.java:52)
 	at pageobjects.MyAccountPage.&lt;init&gt;(MyAccountPage.java:32)
-	at pageobjects.SignInPage.login(SignInPage.java:80)
-	at tests.StoreTests.verifyInvalidLogin(StoreTests.java:60)
+	at pageobjects.SignInPage.login(SignInPage.java:82)
+	at tests.StoreTests.verifyInvalidLogin(StoreTests.java:68)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 37 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace997692431", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace997692431'><pre>java.lang.AssertionError: expected [http://localhost/Avactis/home.php] but found [http://localhost/Avactis/sign-in.php?timestamp=1653578306]
+... Removed 37 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1013314273", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1013314273'><pre>java.lang.AssertionError: expected [http://localhost/Avactis/home.php] but found [http://localhost/Avactis/sign-in.php?timestamp=1654197047]
 	at org.testng.Assert.fail(Assert.java:110)
 	at org.testng.Assert.failNotEquals(Assert.java:1413)
 	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
@@ -94,8 +94,8 @@ function toggleAllBoxes() {
 	at pageobjects.MyAccountPage.isLoaded(MyAccountPage.java:44)
 	at org.openqa.selenium.support.ui.LoadableComponent.get(LoadableComponent.java:52)
 	at pageobjects.MyAccountPage.&lt;init&gt;(MyAccountPage.java:32)
-	at pageobjects.SignInPage.login(SignInPage.java:80)
-	at tests.StoreTests.verifyInvalidLogin(StoreTests.java:60)
+	at pageobjects.SignInPage.login(SignInPage.java:82)
+	at tests.StoreTests.verifyInvalidLogin(StoreTests.java:68)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -129,21 +129,21 @@ function toggleAllBoxes() {
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:595)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:581)
 </pre></div></td>
-<td>3</td>
-<td>tests.StoreTests@30814f43</td></tr>
+<td>8</td>
+<td>tests.StoreTests@2257fadf</td></tr>
 <tr>
 <td title='tests.StoreTests.verifyReRegisterUser()'><b>verifyReRegisterUser</b><br>Test class: tests.StoreTests</td>
 <td><div><pre>java.lang.AssertionError: expected [true] but found [false]
-	at tests.StoreTests.verifyReRegisterUser(StoreTests.java:43)
+	at tests.StoreTests.verifyReRegisterUser(StoreTests.java:49)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 36 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace403032668", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace403032668'><pre>java.lang.AssertionError: expected [true] but found [false]
+... Removed 36 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace399793403", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace399793403'><pre>java.lang.AssertionError: expected [true] but found [false]
 	at org.testng.Assert.fail(Assert.java:110)
 	at org.testng.Assert.failNotEquals(Assert.java:1413)
 	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
 	at org.testng.Assert.assertEquals(Assert.java:131)
 	at org.testng.Assert.assertEquals(Assert.java:643)
-	at tests.StoreTests.verifyReRegisterUser(StoreTests.java:43)
+	at tests.StoreTests.verifyReRegisterUser(StoreTests.java:49)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -177,8 +177,8 @@ function toggleAllBoxes() {
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:595)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:581)
 </pre></div></td>
-<td>21</td>
-<td>tests.StoreTests@30814f43</td></tr>
+<td>30</td>
+<td>tests.StoreTests@2257fadf</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -188,15 +188,20 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='tests.StoreTests.verifyRegisterUser()'><b>verifyRegisterUser</b><br>Test class: tests.StoreTests</td>
-<td></td>
-<td>11</td>
-<td>tests.StoreTests@30814f43</td></tr>
-<tr>
 <td title='tests.StoreTests.verifyLogin()'><b>verifyLogin</b><br>Test class: tests.StoreTests</td>
 <td></td>
-<td>6</td>
-<td>tests.StoreTests@30814f43</td></tr>
+<td>16</td>
+<td>tests.StoreTests@2257fadf</td></tr>
+<tr>
+<td title='tests.StoreTests.verifyRegisterUser()'><b>verifyRegisterUser</b><br>Test class: tests.StoreTests</td>
+<td></td>
+<td>24</td>
+<td>tests.StoreTests@2257fadf</td></tr>
+<tr>
+<td title='tests.StoreTests.verifyProductsAddedToCart()'><b>verifyProductsAddedToCart</b><br>Test class: tests.StoreTests</td>
+<td></td>
+<td>80</td>
+<td>tests.StoreTests@2257fadf</td></tr>
 </table><p>
 </body>
 </html>

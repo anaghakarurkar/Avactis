@@ -11,6 +11,8 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.LoadableComponent;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+import utilities.Log;
 import utilities.Settings;
 
 public class AdminCustomerPage extends LoadableComponent<AdminCustomerPage> {
@@ -75,5 +77,6 @@ public class AdminCustomerPage extends LoadableComponent<AdminCustomerPage> {
 		actions.moveToElement(topMenuSignOut);
 		actions.click();
 		actions.perform();
+		Log.info("Customer deleted from database.");
 	}
 }

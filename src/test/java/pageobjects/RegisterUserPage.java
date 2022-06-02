@@ -12,6 +12,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import pageobjects.elements.FixedTopMenu;
 import utilities.Customer;
+import utilities.Log;
 import utilities.Settings;
 
 public class RegisterUserPage extends LoadableComponent<RegisterUserPage> {
@@ -109,9 +110,11 @@ public class RegisterUserPage extends LoadableComponent<RegisterUserPage> {
 		}
 		if (driver.getCurrentUrl().equals(oldUrl)) {
 			FixedTopMenu.signInLink.click();
+			Log.error("Registration Failed.");
 			return false;
 		} else {
 			MyAccountPage accPage = new MyAccountPage(driver);
+			Log.info("Registration Successful!");
 			accPage.customerSignOut();
 			return true;
 		}

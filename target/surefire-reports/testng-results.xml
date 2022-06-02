@@ -1,41 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="4" passed="2" failed="2" skipped="0">
+<testng-results ignored="0" total="5" passed="3" failed="2" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-05-26T16:17:41 BST" name="Suite" finished-at="2022-05-26T16:18:58 BST" duration-ms="77313">
+  <suite started-at="2022-06-02T20:09:24 BST" name="Suite" finished-at="2022-06-02T20:12:54 BST" duration-ms="209797">
     <groups>
     </groups>
-    <test started-at="2022-05-26T16:17:41 BST" name="Test" finished-at="2022-05-26T16:18:58 BST" duration-ms="77313">
+    <test started-at="2022-06-02T20:09:24 BST" name="Test" finished-at="2022-06-02T20:12:54 BST" duration-ms="209797">
       <class name="tests.StoreTests">
-        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:tests.StoreTests@30814f43]" started-at="2022-05-26T16:17:41 BST" name="beforeSuite" finished-at="2022-05-26T16:17:41 BST" duration-ms="19" status="PASS">
+        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:tests.StoreTests@2257fadf]" started-at="2022-06-02T20:09:24 BST" name="beforeSuite" finished-at="2022-06-02T20:09:24 BST" duration-ms="24" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeSuite -->
-        <test-method is-config="true" signature="beforeTest()[pri:0, instance:tests.StoreTests@30814f43]" started-at="2022-05-26T16:17:41 BST" name="beforeTest" finished-at="2022-05-26T16:17:41 BST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:tests.StoreTests@2257fadf]" started-at="2022-06-02T20:09:24 BST" name="beforeTest" finished-at="2022-06-02T20:09:24 BST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method is-config="true" signature="beforeClass()[pri:0, instance:tests.StoreTests@30814f43]" started-at="2022-05-26T16:17:41 BST" name="beforeClass" finished-at="2022-05-26T16:17:44 BST" duration-ms="3658" status="PASS">
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:tests.StoreTests@2257fadf]" started-at="2022-06-02T20:09:24 BST" name="beforeClass" finished-at="2022-06-02T20:09:30 BST" duration-ms="6145" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:tests.StoreTests@30814f43]" started-at="2022-05-26T16:17:44 BST" name="beforeMethod" finished-at="2022-05-26T16:17:44 BST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:tests.StoreTests@2257fadf]" started-at="2022-06-02T20:09:30 BST" name="beforeMethod" finished-at="2022-06-02T20:09:30 BST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="verifyRegisterUser()[pri:1, instance:tests.StoreTests@30814f43]" started-at="2022-05-26T16:17:45 BST" name="verifyRegisterUser" finished-at="2022-05-26T16:17:56 BST" duration-ms="11207" status="PASS">
+        <test-method signature="verifyRegisterUser()[pri:1, instance:tests.StoreTests@2257fadf]" started-at="2022-06-02T20:09:31 BST" name="verifyRegisterUser" finished-at="2022-06-02T20:09:55 BST" duration-ms="24482" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyRegisterUser -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:tests.StoreTests@30814f43]" started-at="2022-05-26T16:17:56 BST" name="afterMethod" finished-at="2022-05-26T16:17:56 BST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:tests.StoreTests@2257fadf]" started-at="2022-06-02T20:09:55 BST" name="afterMethod" finished-at="2022-06-02T20:09:55 BST" duration-ms="8" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:tests.StoreTests@30814f43]" started-at="2022-05-26T16:17:56 BST" name="beforeMethod" finished-at="2022-05-26T16:17:56 BST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method signature="verifyReRegisterUser()[pri:2, instance:tests.StoreTests@30814f43]" started-at="2022-05-26T16:17:56 BST" name="verifyReRegisterUser" finished-at="2022-05-26T16:18:17 BST" duration-ms="21674" status="FAIL">
+        <test-method signature="verifyReRegisterUser()[pri:2, instance:tests.StoreTests@2257fadf]" started-at="2022-06-02T20:09:55 BST" name="verifyReRegisterUser" finished-at="2022-06-02T20:10:26 BST" duration-ms="30927" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[expected [true] but found [false]]]>
@@ -47,7 +43,7 @@ at org.testng.Assert.failNotEquals(Assert.java:1413)
 at org.testng.Assert.assertEqualsImpl(Assert.java:149)
 at org.testng.Assert.assertEquals(Assert.java:131)
 at org.testng.Assert.assertEquals(Assert.java:643)
-at tests.StoreTests.verifyReRegisterUser(StoreTests.java:43)
+at tests.StoreTests.verifyReRegisterUser(StoreTests.java:49)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -86,33 +82,37 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:581)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyReRegisterUser -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:tests.StoreTests@30814f43]" started-at="2022-05-26T16:18:18 BST" name="afterMethod" finished-at="2022-05-26T16:18:18 BST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:tests.StoreTests@30814f43]" started-at="2022-05-26T16:18:18 BST" name="beforeMethod" finished-at="2022-05-26T16:18:18 BST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:tests.StoreTests@2257fadf]" started-at="2022-06-02T20:09:55 BST" name="beforeMethod" finished-at="2022-06-02T20:09:55 BST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="verifyLogin()[pri:3, instance:tests.StoreTests@30814f43]" started-at="2022-05-26T16:18:18 BST" name="verifyLogin" finished-at="2022-05-26T16:18:24 BST" duration-ms="6403" status="PASS">
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:tests.StoreTests@2257fadf]" started-at="2022-06-02T20:10:26 BST" name="afterMethod" finished-at="2022-06-02T20:10:26 BST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:tests.StoreTests@2257fadf]" started-at="2022-06-02T20:10:26 BST" name="beforeMethod" finished-at="2022-06-02T20:10:26 BST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="verifyLogin()[pri:3, instance:tests.StoreTests@2257fadf]" started-at="2022-06-02T20:10:26 BST" name="verifyLogin" finished-at="2022-06-02T20:10:42 BST" duration-ms="16068" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyLogin -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:tests.StoreTests@30814f43]" started-at="2022-05-26T16:18:24 BST" name="afterMethod" finished-at="2022-05-26T16:18:24 BST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:tests.StoreTests@2257fadf]" started-at="2022-06-02T20:10:42 BST" name="afterMethod" finished-at="2022-06-02T20:10:42 BST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:tests.StoreTests@30814f43]" started-at="2022-05-26T16:18:24 BST" name="beforeMethod" finished-at="2022-05-26T16:18:24 BST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:tests.StoreTests@2257fadf]" started-at="2022-06-02T20:10:42 BST" name="beforeMethod" finished-at="2022-06-02T20:10:42 BST" duration-ms="3" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="verifyInvalidLogin()[pri:4, instance:tests.StoreTests@30814f43]" started-at="2022-05-26T16:18:24 BST" name="verifyInvalidLogin" finished-at="2022-05-26T16:18:27 BST" duration-ms="3333" status="FAIL">
+        <test-method signature="verifyInvalidLogin()[pri:4, instance:tests.StoreTests@2257fadf]" started-at="2022-06-02T20:10:42 BST" name="verifyInvalidLogin" finished-at="2022-06-02T20:10:51 BST" duration-ms="8559" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[expected [http://localhost/Avactis/home.php] but found [http://localhost/Avactis/sign-in.php?timestamp=1653578306]]]>
+              <![CDATA[expected [http://localhost/Avactis/home.php] but found [http://localhost/Avactis/sign-in.php?timestamp=1654197047]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [http://localhost/Avactis/home.php] but found [http://localhost/Avactis/sign-in.php?timestamp=1653578306]
+              <![CDATA[java.lang.AssertionError: expected [http://localhost/Avactis/home.php] but found [http://localhost/Avactis/sign-in.php?timestamp=1654197047]
 at org.testng.Assert.fail(Assert.java:110)
 at org.testng.Assert.failNotEquals(Assert.java:1413)
 at org.testng.Assert.assertEqualsImpl(Assert.java:149)
@@ -122,8 +122,8 @@ at org.testng.Assert.assertEquals(Assert.java:665)
 at pageobjects.MyAccountPage.isLoaded(MyAccountPage.java:44)
 at org.openqa.selenium.support.ui.LoadableComponent.get(LoadableComponent.java:52)
 at pageobjects.MyAccountPage.<init>(MyAccountPage.java:32)
-at pageobjects.SignInPage.login(SignInPage.java:80)
-at tests.StoreTests.verifyInvalidLogin(StoreTests.java:60)
+at pageobjects.SignInPage.login(SignInPage.java:82)
+at tests.StoreTests.verifyInvalidLogin(StoreTests.java:68)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -162,19 +162,31 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:581)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyInvalidLogin -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:tests.StoreTests@30814f43]" started-at="2022-05-26T16:18:28 BST" name="afterMethod" finished-at="2022-05-26T16:18:28 BST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:tests.StoreTests@2257fadf]" started-at="2022-06-02T20:10:51 BST" name="afterMethod" finished-at="2022-06-02T20:10:51 BST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="afterClass()[pri:0, instance:tests.StoreTests@30814f43]" started-at="2022-05-26T16:18:28 BST" name="afterClass" finished-at="2022-05-26T16:18:58 BST" duration-ms="30380" status="PASS">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:tests.StoreTests@2257fadf]" started-at="2022-06-02T20:10:51 BST" name="beforeMethod" finished-at="2022-06-02T20:10:51 BST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="verifyProductsAddedToCart()[pri:5, instance:tests.StoreTests@2257fadf]" started-at="2022-06-02T20:10:51 BST" name="verifyProductsAddedToCart" finished-at="2022-06-02T20:12:12 BST" duration-ms="80990" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyProductsAddedToCart -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:tests.StoreTests@2257fadf]" started-at="2022-06-02T20:12:12 BST" name="afterMethod" finished-at="2022-06-02T20:12:12 BST" duration-ms="9" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:tests.StoreTests@2257fadf]" started-at="2022-06-02T20:12:12 BST" name="afterClass" finished-at="2022-06-02T20:12:54 BST" duration-ms="41663" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
-        <test-method is-config="true" signature="afterTest()[pri:0, instance:tests.StoreTests@30814f43]" started-at="2022-05-26T16:18:58 BST" name="afterTest" finished-at="2022-05-26T16:18:58 BST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:tests.StoreTests@2257fadf]" started-at="2022-06-02T20:12:54 BST" name="afterTest" finished-at="2022-06-02T20:12:54 BST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
-        <test-method is-config="true" signature="afterSuite()[pri:0, instance:tests.StoreTests@30814f43]" started-at="2022-05-26T16:18:58 BST" name="afterSuite" finished-at="2022-05-26T16:18:58 BST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="afterSuite()[pri:0, instance:tests.StoreTests@2257fadf]" started-at="2022-06-02T20:12:54 BST" name="afterSuite" finished-at="2022-06-02T20:12:54 BST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterSuite -->

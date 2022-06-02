@@ -4,6 +4,7 @@ import static org.testng.Assert.assertEquals;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.LoadableComponent;
@@ -13,11 +14,13 @@ public class AdminHomePage extends LoadableComponent<AdminHomePage> {
 String expectedPageTitle = "Home - Avactis Shopping Cart";
 	private WebDriver driver;
 	private WebDriverWait wait;
-
-@FindBy(xpath="//li[@id='menu-users']/a")
+	
+@FindBy(xpath="//li[@id='menu-users']/a[@href='users.php']")
 public WebElement customersLink;
+@FindBy(xpath="//ul[@class='sub-menu']//span[text()='Customers']")
+public WebElement customerSubMenuLink;
 
-
+//div[@class='page-sidebar-wrapper']//a[@href='customers.php']
 
 public AdminHomePage(WebDriver driver, WebDriverWait wait) {
 	this.driver = driver;
@@ -38,7 +41,12 @@ public AdminHomePage(WebDriver driver, WebDriverWait wait) {
 	}
 	
 	public void chooseCustomerMenuOption() {
-		customersLink.click();
+		Actions action = new Actions(driver);
+		action.moveToElement(customersLink);
+		action.moveToElement(customerSubMenuLink);
+		action.click();
+		action.perform();
+		
 		AdminCustomerPage custPage= new AdminCustomerPage(driver, wait);
 		custPage.deleteCustomerTestData();
 	}

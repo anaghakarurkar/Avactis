@@ -78,7 +78,7 @@ public final class Base {
 		
 		wait = new WebDriverWait(driver,
 				Duration.ofSeconds(waitSeconds));
-		
+		driver.manage().deleteAllCookies();
 		driver.manage().window().maximize();
 	}
 

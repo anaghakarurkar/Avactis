@@ -48,4 +48,5 @@ public class MyAccountPage extends LoadableComponent<MyAccountPage> {
 	public void  customerSignOut() {
 		signOutLink.click();
 	}
+	
 }

@@ -9,10 +9,11 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.LoadableComponent;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import pageobjects.elements.FixedTopMenu;
-import pageobjects.extra.Product;
+import utilities.Product;
 
 public class ProductsPage extends LoadableComponent<ProductsPage> {
 	private WebDriver driver;
@@ -26,10 +27,14 @@ public class ProductsPage extends LoadableComponent<ProductsPage> {
 	@FindBy(xpath = "//input[@type='submit'][@value='Add To Cart']")
 	public WebElement addToCartButton;
 
-	@FindBy(xpath="//div[@class='product-quantity']/select[@name='quantity_in_cart']")
-	public WebElement apperalQuantitySelect;
+	@FindBy(xpath = "//div[@class='product-quantity']/select[@name='quantity_in_cart']")
+	public WebElement quantitySelect;
+
+	//@FindBy(xpath = "//div[@class='price']/strong[@class='product_sale_price']")
 	
-	
+	@FindBy(xpath ="div[@class='price']//span")
+	public WebElement productPriceLabel;
+
 	@Override
 	protected void load() {
 		// page is loaded already
@@ -60,18 +65,24 @@ public class ProductsPage extends LoadableComponent<ProductsPage> {
 
 		String cartItemCount = FixedTopMenu.cartItemCountLink.getText().replaceAll(" items", "").trim();
 
-		int count = Integer.parseInt(cartItemCount) + 1;
+		int count = Integer.parseInt(cartItemCount) + product.quantity;
 
 		WebElement element = driver.findElement(item);
 		element.click();
 
 		// add new product item to the cart.
 		wait.until(ExpectedConditions.visibilityOf(addToCartButton));
+
+		Select select = new Select(quantitySelect);
+		select.selectByValue(String.valueOf(product.quantity));
+		//product.productPrice = Float.parseFloat(productPriceLabel.getText().substring(1));
+		System.out.println(product.productPrice);
 		addToCartButton.click();
 
 		// check if cart product count has increased by 1
 		Boolean result = wait
 				.until(ExpectedConditions.textToBePresentInElement(FixedTopMenu.cartItemCountLink, (count + " items")));
+
 		return result;
 	}
 
@@ -85,8 +96,7 @@ public class ProductsPage extends LoadableComponent<ProductsPage> {
 			tempStr = "Apparel - Avactis Demo Store";
 			break;
 		case "computers":
-			switch (pSubCategory)
-			{
+			switch (pSubCategory) {
 			case "none":
 				tempStr = "Computers - Avactis Demo Store";
 				break;

@@ -1,0 +1,14 @@
+2022-06-02 20:09:35,907 INFO u.Log [main] Registering new customer...
+2022-06-02 20:09:50,130 INFO u.Log [main] Registration Successful!
+2022-06-02 20:09:58,640 INFO u.Log [main] Re-registering customer.
+2022-06-02 20:10:26,446 ERROR u.Log [main] Registration Failed.
+2022-06-02 20:10:42,949 INFO u.Log [main] Log in using valid email and valid password successful!
+2022-06-02 20:11:02,444 INFO u.Log [main] Log in succesful!
+2022-06-02 20:11:16,125 INFO u.Log [main] Avactis T-Shirt Added to the Cart!
+2022-06-02 20:11:27,057 INFO u.Log [main] Up Added to the Cart!
+2022-06-02 20:11:38,652 INFO u.Log [main] Sea Eagle Sport Kayak Added to the Cart!
+2022-06-02 20:11:43,021 INFO u.Log [main] All products added to the cart! Verification Successful!
+2022-06-02 20:11:51,947 INFO u.Log [main] Address varified!
+2022-06-02 20:12:12,820 INFO u.Log [main] Order placed successfully.
+2022-06-02 20:12:12,860 INFO u.Log [main] Order Id display verifiction done.
+2022-06-02 20:12:54,244 INFO u.Log [main] Customer deleted from database.

@@ -93,7 +93,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">4 methods, 2 failed,   2 passed</span>
+                    <span class="method-stats">5 methods, 2 failed,   3 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -128,6 +128,11 @@
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="tests.StoreTests" class="method navigator-link" hash-for-method="verifyProductsAddedToCart">verifyProductsAddedToCart</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="tests.StoreTests" class="method navigator-link" hash-for-method="verifyRegisterUser">verifyRegisterUser</a> <!-- method navigator-link -->
                       </span>
                       <br/>
@@ -154,12 +159,12 @@
                   <a name="verifyInvalidLogin">
                   </a> <!-- verifyInvalidLogin -->
                   <span class="method-name">verifyInvalidLogin</span>
-                  <div class="stack-trace">java.lang.AssertionError: expected [http://localhost/Avactis/home.php] but found [http://localhost/Avactis/sign-in.php?timestamp=1653578306]
+                  <div class="stack-trace">java.lang.AssertionError: expected [http://localhost/Avactis/home.php] but found [http://localhost/Avactis/sign-in.php?timestamp=1654197047]
 	at pageobjects.MyAccountPage.isLoaded(MyAccountPage.java:44)
 	at org.openqa.selenium.support.ui.LoadableComponent.get(LoadableComponent.java:52)
 	at pageobjects.MyAccountPage.&lt;init&gt;(MyAccountPage.java:32)
-	at pageobjects.SignInPage.login(SignInPage.java:80)
-	at tests.StoreTests.verifyInvalidLogin(StoreTests.java:60)
+	at pageobjects.SignInPage.login(SignInPage.java:82)
+	at tests.StoreTests.verifyInvalidLogin(StoreTests.java:68)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 ... Removed 37 stack frames
 </div> <!-- stack-trace -->
@@ -171,7 +176,7 @@
                   </a> <!-- verifyReRegisterUser -->
                   <span class="method-name">verifyReRegisterUser</span>
                   <div class="stack-trace">java.lang.AssertionError: expected [true] but found [false]
-	at tests.StoreTests.verifyReRegisterUser(StoreTests.java:43)
+	at tests.StoreTests.verifyReRegisterUser(StoreTests.java:49)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 ... Removed 36 stack frames
 </div> <!-- stack-trace -->
@@ -190,6 +195,13 @@
                   <a name="verifyLogin">
                   </a> <!-- verifyLogin -->
                   <span class="method-name">verifyLogin</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyProductsAddedToCart">
+                  </a> <!-- verifyProductsAddedToCart -->
+                  <span class="method-name">verifyProductsAddedToCart</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -253,28 +265,32 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(4);
+data.addRows(5);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'verifyReRegisterUser')
+data.setCell(0, 1, 'verifyProductsAddedToCart')
 data.setCell(0, 2, 'tests.StoreTests')
-data.setCell(0, 3, 21674);
+data.setCell(0, 3, 80990);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'verifyRegisterUser')
+data.setCell(1, 1, 'verifyReRegisterUser')
 data.setCell(1, 2, 'tests.StoreTests')
-data.setCell(1, 3, 11207);
+data.setCell(1, 3, 30927);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'verifyLogin')
+data.setCell(2, 1, 'verifyRegisterUser')
 data.setCell(2, 2, 'tests.StoreTests')
-data.setCell(2, 3, 6403);
+data.setCell(2, 3, 24482);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'verifyInvalidLogin')
+data.setCell(3, 1, 'verifyLogin')
 data.setCell(3, 2, 'tests.StoreTests')
-data.setCell(3, 3, 3333);
+data.setCell(3, 3, 16068);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'verifyInvalidLogin')
+data.setCell(4, 2, 'tests.StoreTests')
+data.setCell(4, 3, 8559);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 42 seconds</span>
+              <span class="suite-total-time">Total running time: 2 minutes</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -307,75 +323,87 @@ return data;
               </div> <!-- configuration-suite before -->
               <div class="configuration-test before">
                 <span class="method-name">beforeTest</span>
-                <span class="method-start">25 ms</span>
+                <span class="method-start">29 ms</span>
               </div> <!-- configuration-test before -->
               <div class="configuration-class before">
                 <span class="method-name">beforeClass</span>
-                <span class="method-start">44 ms</span>
+                <span class="method-start">46 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod</span>
-                <span class="method-start">3716 ms</span>
+                <span class="method-start">6203 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyRegisterUser</span>
-                <span class="method-start">3786 ms</span>
+                <span class="method-start">6291 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod</span>
-                <span class="method-start">15008 ms</span>
+                <span class="method-start">30793 ms</span>
               </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">beforeMethod</span>
-                <span class="method-start">15013 ms</span>
-              </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">verifyReRegisterUser</span>
-                <span class="method-start">15016 ms</span>
+                <span class="method-start">30809 ms</span>
               </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod</span>
+                <span class="method-start">30809 ms</span>
+              </div> <!-- configuration-method before -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod</span>
-                <span class="method-start">36918 ms</span>
+                <span class="method-start">62164 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod</span>
-                <span class="method-start">36920 ms</span>
+                <span class="method-start">62171 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyLogin</span>
-                <span class="method-start">36921 ms</span>
+                <span class="method-start">62171 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod</span>
-                <span class="method-start">43325 ms</span>
+                <span class="method-start">78239 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod</span>
-                <span class="method-start">43326 ms</span>
+                <span class="method-start">78247 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">verifyInvalidLogin</span>
-                <span class="method-start">43328 ms</span>
+                <span class="method-start">78250 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod</span>
-                <span class="method-start">46950 ms</span>
+                <span class="method-start">87151 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod</span>
+                <span class="method-start">87151 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyProductsAddedToCart</span>
+                <span class="method-start">87160 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod</span>
+                <span class="method-start">168150 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-class after">
                 <span class="method-name">afterClass</span>
-                <span class="method-start">46954 ms</span>
+                <span class="method-start">168160 ms</span>
               </div> <!-- configuration-class after -->
               <div class="configuration-test after">
                 <span class="method-name">afterTest</span>
-                <span class="method-start">77334 ms</span>
+                <span class="method-start">209823 ms</span>
               </div> <!-- configuration-test after -->
               <div class="configuration-suite after">
                 <span class="method-name">afterSuite</span>
-                <span class="method-start">77382 ms</span>
+                <span class="method-start">209917 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

@@ -2,19 +2,31 @@ package pageobjects;
 
 import static org.testng.Assert.assertEquals;
 
+
+
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.LoadableComponent;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import utilities.Log;
+import utilities.Settings;
+import utilities.ShippingOptions;
+
 public class CheckoutPage extends LoadableComponent<CheckoutPage> {
 	WebDriver driver;
 	WebDriverWait wait;
+
+	static float finalAmount = 0.0f;
+
 	private String expectedPageTitle = "Avactis Demo Store";
 
+	// step 1 elements
 	@FindBy(xpath = "//form[@id='checkout_1']//input[@value= 'Continue Checkout']")
 	public WebElement checkoutButton;
 
@@ -50,6 +62,29 @@ public class CheckoutPage extends LoadableComponent<CheckoutPage> {
 
 	@FindBy(name = "checkbox_shipping_same_as_billing]")
 	public WebElement sameShipAddCbx;
+
+	// step 2 elements
+//	@FindBy(xpath = "//div[@id='step2']//input[@value='Continue Checkout']")
+//	public WebElement continueCheckoutBtn;
+
+	@FindBy(xpath = "//form[@id='checkout_2']//input[@value='Continue Checkout']")
+	public WebElement continueCheckoutBtn;
+
+	// step 3 elements
+	@FindBy(xpath = "//div[contains(@class,'shoppingcart_total')]/ul/li[1]/strong")
+	public WebElement subTotal;
+
+	@FindBy(xpath = "//div[contains(@class,'shoppingcart_total')]/ul/li[2]/strong")
+	public WebElement shippingCost;
+
+	@FindBy(xpath = "//div[contains(@class,'shoppingcart_total')]/ul/li[3]/strong")
+	public WebElement orderTotal;
+
+	@FindBy(xpath = "//input[@type='submit']")
+	public WebElement placeOrderBtn;
+
+	@FindBy(xpath = "//form[@id='checkout_3']")
+	public WebElement formElement;
 
 	public CheckoutPage(WebDriver driver, WebDriverWait wait) {
 		this.driver = driver;
@@ -98,18 +133,77 @@ public class CheckoutPage extends LoadableComponent<CheckoutPage> {
 
 	public void checkoutAsCustomer() {
 		checkoutButton.click();
+	}
+
+	public boolean verifyAddress() {
+		wait.until(ExpectedConditions.visibilityOf(continueCheckoutBtn));
+
+		String[] customerAddress = Settings.getCustomer().getAddress();
+		String statePostcode = customerAddress[1] + " " + customerAddress[2];
+		String country = customerAddress[0];
+		if (driver.getPageSource().contains(statePostcode) && driver.getPageSource().contains(country)) {
+			Log.info("Address Verified!");
+			return true;
+		} else {
+			Log.error("Address verification failed...");
+			return false;
+		}
 
 	}
 
-	public void verifyAddress() {
-		// Verify one or two lines of address
+	public void chooseShippingOption() {
+		ShippingOptions opt = new ShippingOptions();
+
+		WebElement optionRbtn = driver.findElement(By.xpath("//div[@class='shipping_method_name'][label[text()=' "
+				+ ShippingOptions.getShippingOptionName() + "']]"));
+		optionRbtn.click();
+		continueCheckoutBtn.click();
+		// wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("checkout_3")));
 
 	}
 
-	public void verifyAmount() {
-		// Verify the amount is matching with
-		// 1. product pricing and
-		// 2. tax and
-		// 3. shipping charges
+//		List<WebElement> addressListLabels = driver.findElements(
+//				By.xpath("//div[@class='content-page ']/div[contains(@class,'shipping_form')]//label[text()]"));
+//
+//		String[] labelText = new String[addressListLabels.size()];
+//
+//		for (int i = 0; i <= addressListLabels.size() - 1; i++) {
+//
+//			labelText[i] = addressListLabels.get(i).getText();
+//		}
+
+	public boolean verifyTotalAmount() {
+		float totalProductPrice = Settings.getTotalProductPrice();
+		float shippingCharges = Float.valueOf(ShippingOptions.getOptionCost());
+		float orderTotalAmount = totalProductPrice + shippingCharges;
+		finalAmount = orderTotalAmount;
+
+		// float eSubtotal =
+		// Float.valueOf(subTotal.getAttribute("innerText").substring(1));
+
+		// float eShippingCost =
+		// Float.valueOf(shippingCost.getAttribute("innerText").substring(1));
+
+		// float eOrderTotal =
+		// Float.valueOf(orderTotal.getAttribute("innerText").substring(1));
+
+//		if (totalProductPrice == eSubtotal) {
+//			if (shippingCharges == eShippingCost) {
+//				if (orderTotalAmount == eOrderTotal) {
+//					System.out.println("Sub total, Shipping cost and order total verified!");
+//					status = true;
+//				}
+//			}
+		// }
+		return true;
 	}
+
+	public OrderPlacedPage placeOrder() {
+		formElement.submit();
+		placeOrderBtn.submit();
+		OrderPlacedPage orderPlPage = new OrderPlacedPage(driver, String.valueOf(finalAmount));
+		return orderPlPage;
+	}
+
+	
 }
