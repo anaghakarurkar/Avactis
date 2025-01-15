@@ -1,5 +1,5 @@
 ### E-Commerce Website Automation Testing project for Avactis website
-![Last Commit](https://img.shields.io/github/last-commit/anaghakarurkar/Avactis) ![GitHub repo size](https://img.shields.io/github/repo-size/anaghakarurkar/Avactis) ![GitHub watchers](https://img.shields.io/github/watchers/anaghakarurkar/Avactis)
+![Last Commit](https://img.shields.io/github/last-commit/anaghakarurkar/Avactis) ![GitHub repo size](https://img.shields.io/github/repo-size/anaghakarurkar/Avactis)
 
 ## Overview
 
