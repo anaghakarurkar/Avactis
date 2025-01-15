@@ -37,3 +37,19 @@ This project is developed to automate testing for an e-commerce website. It ensu
 - Jenkins setup for CI/CD pipeline.
 
 - Supported browsers (e.g., Chrome, Firefox) and corresponding WebDriver executables.
+
+## Setup Instructions
+
+<ol>
+  <li><p>Clone the repository:</p> <p><strong>  git clone</strong></p></li>
+  <li><p>Navigate to the project directory:</p><p><strong>  cd ecommerce-automation-testing</strong></p></li>
+  <li> <p>Install dependencies using Maven:</p> <p><strong>  mvn clean install</strong></p></li>
+  <li>Configure the testng.xml file for the test suite.</li>
+  <li><p>Execute tests:</p> <p><strong>  mvn test</strong></p></li>
+  <li><p>View test results in the Allure Reports:</p> <p><strong>  allure serve target/allure-results</strong></p> </li>
+</ol>
+
+
+
+
+
